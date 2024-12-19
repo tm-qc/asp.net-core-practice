@@ -14,4 +14,27 @@ public class HelloController : Controller
     public IActionResult Index(){
        return Content("こんにちは"); 
     }
+
+    public IActionResult Show()
+    {
+      //ビュー変数：ビューに渡したい変数
+
+      //変数
+      //C#の識別子に - が使えないのでViewBagでは名前に - は使えない
+      //dynamicオブジェクトらしい
+      ViewBag.Message = "こんちにわ。世界";
+
+      //ディクショナリ(コレクションの連想配列)
+      ViewData["Message"] = "こんばんわ。世界";
+
+      //↑この二つ別物に見えて、同じもの
+      //変数名とキーが同じなら、後で書いてるものに上書きされてる
+      //これはやっかいなので書き方は統一する
+      //またこの二つよりViewModelを使うのが一般的らしい
+
+      //テンプレート呼び出し
+      //引数なしの場合、アクションと一致するテンプレートを呼ぶ
+      //Views/コントローラー/アクション名.cshtml
+      return View();
+    }
 }
