@@ -1,0 +1,12 @@
+# この `.editorconfig` ファイルをルートとする
+# このファイルより上位のディレクトリにある .editorconfig ファイルの設定を無視します
+root = true
+
+# すべてのファイルに適用する設定
+[*]
+end_of_line = lf            # 改行コードを LF に統一
+insert_final_newline = true # ファイル末尾に改行を追加
+
+# C# ファイルの設定
+[*.cs]
+charset = utf-8             # 文字コードを UTF-8 に統一
