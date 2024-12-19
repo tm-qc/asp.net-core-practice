@@ -1,0 +1,19 @@
+# すべてのテキストファイルを LF に統一
+# Git はリポジトリにコミットする際、改行コードを LF に変換します。
+* text=auto eol=lf
+
+# バイナリファイルは改行コードの変換を行わない
+# バイナリファイルはテキストファイルではないため、そのままの形式を保持します。
+*.exe binary
+*.dll binary
+*.png binary
+*.jpg binary
+
+# スクリプトファイル（Linuxで実行するもの）は LF に統一
+# Linux シェルスクリプトは LF の改行である必要があります。
+*.sh text eol=lf
+
+# Windows用バッチファイルは CRLF を維持
+# Windows のバッチファイルは CRLF の改行である必要があります。
+*.bat text eol=crlf
+*.cmd text eol=crlf
