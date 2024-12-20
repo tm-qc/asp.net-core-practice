@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;//UseSqlServerにひつようだった
+using SelfAspNet.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// モデルコンテキストを登録
+builder.Services.AddDbContext<MyContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("MyContext")
+    )
+);
 
 var app = builder.Build();
 
