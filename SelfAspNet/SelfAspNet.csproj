@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+  <!-- ファイル追加したときに自動で追記されるっぽいのコメントアウト -->
+  <!-- Seed.sqlはビルドエラーになるので除外しないといけない -->
+    <!-- <Compile Include="Seed.sql" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -18,6 +24,23 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
+
+    <!--
+        "Seed.sql" ファイルをプロジェクト内で特別に扱う設定を記述する。
+        "Update" 属性は、すでにプロジェクトに含まれている "Seed.sql" ファイルを対象として更新することを示す。
+        これにより、ファイルが "Build" 対象にはならず、独立したリソースとして扱われる。
+    -->
+    <None Update="Seed.sql">
+        <!--
+            "CopyToOutputDirectory" は、このファイルをビルド時に出力ディレクトリにコピーする条件を指定する。
+            "PreserveNewest" を指定すると、以下の動作をする：
+            - ソースディレクトリ（プロジェクト内の Seed.sql）が
+              出力ディレクトリ（bin/Debug/netX.X 内）の Seed.sql より新しい場合にのみコピーする。
+            - 無駄なコピー処理を防ぎ、ビルド速度を向上させる。
+        -->
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+
   </ItemGroup>
 
 </Project>
