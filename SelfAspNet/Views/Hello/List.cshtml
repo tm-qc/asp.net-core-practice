@@ -1,0 +1,26 @@
+@* モデルをRazorテンプレートで参照する際に必要 *@
+@model IEnumerable<SelfAspNet.Models.Sample>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>sub_title</th>
+    </tr>
+    @* Model は、@model ディレクティブによって型付けされたモデルオブジェクト(List<T>)へのアクセスを提供する固定名 *@
+    @* コントローラーでreturn view()してるsamplesになる *@
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.title</td>
+            <td>@item.sub_title</td>
+        </tr>
+    }
+</table>
