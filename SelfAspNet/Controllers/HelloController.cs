@@ -54,7 +54,22 @@ public class HelloController : Controller
       // List<T>の中身は、Sample 型のオブジェクトが順序通りに格納されたリストになります。
 
       // var samples = _db.Samples.ToList();//varの場合
-      List<Sample> samples = _db.Samples.ToList();
+      // List<Sample> samples = _db.Samples.ToList();
+
+      // これでもいける
+      // var samples = _db.Samples;
+      IEnumerable<SelfAspNet.Models.Sample> samples = _db.Samples;
+
+      //型のメモ
+      // 遅延実行を活用して効率良くデータ処理をしたい → IEnumerable<T>
+      // データをメモリにロードして、柔軟に操作したい → List<T>
+
+      // どっち使う？
+      // ビューに渡す場合やデータを複数回使う場合:
+      // → List<Sample> samples = _db.Samples.ToList();
+
+      // クエリを遅延実行(必要な時だけ取得)してデータベース負荷を軽減したい場合:
+      // → IEnumerable<SelfAspNet.Models.Sample> samples = _db.Samples;
 
       // List<T>の中身のイメージ
       // List<Sample> samples = new List<Sample>()
