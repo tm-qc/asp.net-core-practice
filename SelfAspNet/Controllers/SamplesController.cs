@@ -19,6 +19,18 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples
+        // - <IActionResult>：非同期(async await)の戻り値の型
+        // - awaitの処理が終わって次の処理に行く。非同期と違い同期処理にする
+        //   (非同期処理って命名がわかりづらいが、要は同期処理)
+        // - ToListAsync()はコレクションでデータを非同期的に取得する
+
+        // 非同期処理とは？
+        // 「非同期」の本質は、「待ち時間にスレッドを解放して他の作業を進められること」 です。
+        // 一見すると同期的に見える動作（結果を待つ）をしつつ、内部的にはリソースを効率的に使っています。
+        
+        // 非同期に効率よく処理しつつ、最終的に同期されて順番に処理をするということ
+
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.Samples.ToListAsync());
