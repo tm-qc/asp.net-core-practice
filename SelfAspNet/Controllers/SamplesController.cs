@@ -37,15 +37,23 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples/Details/5
+        // リクエストデータと同じ名前の引数で自動で値を受け取れる(int? id)
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
+                // 404エラーを返す
                 return NotFound();
             }
 
+            // idと一致するデータを取得。なければnullを返す
+            // FindAsync(id)でもいいらしい。こっちがシンプルで良さそう
+
+            // FirstOrDefaultAsync：主キー以外で条件つけて検索できる
+            // FindAsync：主キーで検索でき、キャッシュも残るのでエコ
             var sample = await _context.Samples
-                .FirstOrDefaultAsync(m => m.id == id);
+                // .FirstOrDefaultAsync(m => m.id == id);
+                .FindAsync(id);
             if (sample == null)
             {
                 return NotFound();
