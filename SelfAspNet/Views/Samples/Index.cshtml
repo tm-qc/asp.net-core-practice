@@ -34,6 +34,11 @@
                 @Html.DisplayFor(modelItem => item.sub_title)
             </td>
             <td>
+                @* 【リンク生成】タグヘルパー：asp-actionとasp-route-idについて*@
+                @* アクションとidを指定したリンクが自動で作成できる *@
+                @* 作成結果例：<a href="/Samples/Edit/1">Edit</a>  *@
+
+                @* asp-xxxxといういろんなリンク生成のメソッドがあるので、何かに関連したリンクを生成するときは利用する *@
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
