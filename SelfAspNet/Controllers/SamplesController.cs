@@ -134,7 +134,8 @@ namespace SelfAspNet.Controllers
             // - フロントからのユニークキーでDB更新させない
             // - ログイン情報と紐づけてそのデータで更新データを特定させる
 
-            
+            // id=引数のint idでルートパラメータのidを受け取る
+            // sample.id=Bindのid(リクエストデータ)
             if (id != sample.id)
             {
                 return NotFound();
