@@ -135,7 +135,7 @@ namespace SelfAspNet.Controllers
             // - ログイン情報と紐づけてそのデータで更新データを特定させる
 
             // id=引数のint idでルートパラメータのidを受け取る
-            // sample.id=Bindのid(リクエストデータ)
+            // sample.id=Bindのid(リクエストデータだがルートパラメータも受けとってる)
             if (id != sample.id)
             {
                 return NotFound();
