@@ -121,6 +121,20 @@ namespace SelfAspNet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,title,sub_title")] Sample sample)
         {
+            // 【大問題】
+            // 1.
+            // idは基本URLのidとるが、今回hiddenでidを送信しているので、それが最終hiddenのidで上書きされてる(結果ルートパラメータのidが受け取れてない)
+            // なので、ルートパラメータと同じhiddenは不要(自動生成なので削除しないといけない)
+
+            // 2.
+            // idのデータはフロントでURL、フォームともに自由に書き換え可能なので、セキュリティ的には危険
+            // 例えばid 1のデータを見てても、F12とかURLでidを書き換えて、DBに存在するidなら書き換えられて別のデータが更新される
+
+            // 【解決策】
+            // - フロントからのユニークキーでDB更新させない
+            // - ログイン情報と紐づけてそのデータで更新データを特定させる
+
+            
             if (id != sample.id)
             {
                 return NotFound();

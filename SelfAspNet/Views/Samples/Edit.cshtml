@@ -12,7 +12,11 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="id" />
+            @* 【大問題】 *@
+            @* ユニークキーを特に更新箇所でルートパラメータやhiddenやinputにもたせるのはNG（id書き換えでデータ荒らし放題) *@
+            @* また、ルートパラメータとhiddenやinput、クエリなどで同じパラメータ名があるとどれを受け取ってるかわからなくなるのでNG *@
+            @* hiddenも今回スキャフォールディングで自動生成されてるが、セキュリティ的にも、そもそも的にも【大問題】なので開発者が危険なものは意識して対処しないといけない *@
+            @* <input type="hidden" asp-for="id" /> *@
             <div class="form-group">
                 <label asp-for="title" class="control-label"></label>
                 <input asp-for="title" class="form-control" />
