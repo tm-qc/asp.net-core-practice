@@ -130,23 +130,26 @@ namespace SelfAspNet.Controllers
             {
                 try
                 {
-                    _context.Update(sample);
-                    await _context.SaveChangesAsync();
+                    _context.Update(sample);//コンテキストにsampleオブジェクトを更新を追加(.Stateも同じ機能らしい)
+                    await _context.SaveChangesAsync();//コンテキストの内容を非同期でDBに更新データを保存
                 }
+                // 同じデータを違う人が同時更新した場合のエラーを検知(多分よほどのことがない限り起きない)
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SampleExists(sample.id))
+                    if (!SampleExists(sample.id)) //idを持ったデータがあるか確認
                     {
-                        return NotFound();
+                        return NotFound();//データがない場合は404エラーを返す
                     }
                     else
                     {
+                        // エラーの時にDbUpdateConcurrencyExceptionなどのスタックトレースを維持しつつ出力、また上位のCatchがあればそれも実行される
+                        // とりあえずエラーの投げたいときはこの書き方でOK
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
             }
-            return View(sample);
+            return View(sample);//バリデーション失敗の時はsample/editを表示
         }
 
         // GET: Samples/Delete/5
