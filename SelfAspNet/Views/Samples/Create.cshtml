@@ -10,7 +10,12 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        @* <form asp-action="Create">について *@
+        @* 結果：<form action="/Samples/Create" method="post" novalidate="novalidate"> *@
+        @* actionについて：コントローラーからSamplesを特定、asp-action="Create"でアクションをcreateに指定 *@
+        @* method：デフォはPost。指定も可能(method="get")*@
+        @* novalidate：フォーム送信時のHTML5によるブラウザ検証を無効化する。使いたいときは色々あるが、手動でformを作成するのがよさそう。詳細は後で *@
+        <form asp-action="Create" novalidate="false">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="title" class="control-label"></label>
