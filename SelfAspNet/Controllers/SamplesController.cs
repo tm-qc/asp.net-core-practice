@@ -186,6 +186,8 @@ namespace SelfAspNet.Controllers
         }
 
         // POST: Samples/Delete/5
+        // DeleteConfirmedメソッドをDeleteメソッドで呼べるようにしてる
+        // (別に POST: Samples/Deleteでアクセスすればいいだけなので、メソッド名をDeleteConfirmed→DeleteにそもそもしてもOK)
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -194,6 +196,11 @@ namespace SelfAspNet.Controllers
             if (sample != null)
             {
                 _context.Samples.Remove(sample);
+
+                // ↓今までeditとcreateではifの中でSaveChangesAsyncしていたが、ここではしてないのは謎です
+                // コードの一貫性やデータなくてもSaveChangesAsync実行するのが、ぱっと見無駄に見えるので、個人的には好ましくない
+                // await _context.SaveChangesAsync();
+                // return RedirectToAction(nameof(Index));
             }
 
             await _context.SaveChangesAsync();
