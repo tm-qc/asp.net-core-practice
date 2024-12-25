@@ -73,17 +73,29 @@ namespace SelfAspNet.Controllers
         // POST: Samples/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        // [HttpPost]：POSTに対応。無指定ならGETになる
         [HttpPost]
+        // CSRF対策
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,title,sub_title")] Sample sample)
+
+        // [Bind("id,title,sub_title")]：必要なデータしか受け取らないことで、セキュリティを高める(オーバーポストを防ぐ)
+        // ただし、idは不要：自動インクリメントされるため、外部から渡す必要はない。むしろ危険なので不要
+        // bindはモデルのプロパティで自動できまるので、毎回しっかり開発者が受け取るべきものだけに整理しないといけない
+
+        // Modelが変更されたら、Bindも変更しないといけない
+        // コントローラーからは例えば引数の Sample sample でModelが判断できる
+        // modelからはvs codeで例えばpublic class Sampleモデルを右クリックですべての参照を検索でみつけれる
+        public async Task<IActionResult> Create([Bind("title,sub_title")] Sample sample)
         {
+            // バリデーション問題なければ登録
             if (ModelState.IsValid)
             {
-                _context.Add(sample);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _context.Add(sample);//コンテキストにsampleオブジェクトを追加
+                await _context.SaveChangesAsync();//コンテキストの内容を非同期でDBに新規データを保存
+                return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
             }
-            return View(sample);
+            return View(sample);//バリデーション失敗の時はsample/createを表示
         }
 
         // GET: Samples/Edit/5
