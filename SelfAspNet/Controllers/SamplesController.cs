@@ -65,6 +65,8 @@ namespace SelfAspNet.Controllers
         // GET: Samples/Create
         public IActionResult Create()
         {
+            // View メソッドに引数を指定しない場合、デフォルトではアクションメソッド名と同じ名前のビューを探して表示
+            // Views/<コントローラー名>/Create.cshtml または Views/Shared/Create.cshtml
             return View();
         }
 
