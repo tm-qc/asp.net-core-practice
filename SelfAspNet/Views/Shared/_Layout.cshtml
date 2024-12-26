@@ -6,8 +6,22 @@
     <title>@ViewData["Title"] - SelfAspNet</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/sample.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/SelfAspNet.styles.css" asp-append-version="true" />
+
+    @* Development(開発環境)の場合読込 *@
+    @* includeをexcludeにするとDevelopment以外になる *@
+    @* Developmentは SelfAspNet\Properties\launchSettings.jsonのASPNETCORE_ENVIRONMENTで設定できる*@
+    @* launchSettings.jsonはローカル用の設定ファイルだが、本番ではサーバーでASPNETCORE_ENVIRONMENTをReleaseで定義するみたい *@
+    @* launchSettings.jsonが反映しないときは dotnet cleanしてdotnet watchで起動したらOK *@
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/sample_dev.css" asp-append-version="true" />
+    </environment>
+    <environment include="Release">
+        <link rel="stylesheet" href="~/css/sample.css" asp-append-version="true" />
+    </environment>
+
+    
 </head>
 <body>
     <header>
@@ -32,6 +46,8 @@
         </nav>
     </header>
     <div class="container">
+        @* launchSettings.jsonの設定を確認 *@
+        <p>Environment: @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</p>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
