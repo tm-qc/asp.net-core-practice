@@ -45,5 +45,39 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    @* js読込サンプル *@
+    
+    @* ローカルのjsファイルならこれだけでOK *@
+    @* <script src="~/js/sample.js" asp-append-version="true"></script> *@
+
+    @* CDNなど外部ファイルを読込ときにはこういうのが必要らしい *@
+    <script 
+        @* メインのjsファイル *@
+        @* 属性の改行形式や閉じタグの扱いによってパスに~があると読み込めないみたい *@
+        src="/js/sample.js"
+
+        @*キャッシュ対策  *@
+        asp-append-version="true"
+
+        @* メインが読込失敗したときの予備のファイル(テストできなかった。メインを失敗にする方法が不明だった) *@
+        asp-fallback-src="/js/sample_reserve.js"
+
+        @* メインが読み込めてるかテスト(テスト方法はファイルによるので今回は一例。しかもテスト方法ない？できなかった) *@
+        asp-fallback-test="window.Vue"
+
+        @* クロスオリジン 主に integrity を使う場合に推奨。*@
+        @* CORSを有効にし、匿名のリクエストとしてリソースを取得するために使用します。 *@
+        @* crossorigin="anonymous" *@
+
+        @* Refererヘッダーを送信しないように設定し、プライバシーを保護するために使用します。 *@
+        @* referrerpolicy="no-referrer" *@
+
+        @* 検証用のハッシュ値。外部との連携の場合不正使用を防ぐために使う。表からは見えないらしい
+        (CDNから提供 or 自分で作って設定(詳細はあまり知らない)) *@
+        @* integrity="sha384-xxxxx" *@
+
+        @* 基本的にここまでするのはCDNを読み込むときだけ *@
+    ></script>
 </body>
 </html>
