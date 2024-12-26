@@ -10,6 +10,9 @@
     <a asp-action="Create">Create New</a>
 </p>
 <p>@ViewBag.Mes</p>
+@* asp-append-versionで画像のキャッシュをクリアして更新されない問題を解決できる *@
+@* 画像はwwwroot配下に設置する *@
+<img src="~/images/rengoku.png" alt="rengoku.png" asp-append-version="true"/>
 <table class="table">
     <thead>
         <tr>
