@@ -33,6 +33,7 @@ namespace SelfAspNet.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.Mes = "ViewBagにデータを入れるとRazorビューで参照できます";
             return View(await _context.Samples.ToListAsync());
         }
 
