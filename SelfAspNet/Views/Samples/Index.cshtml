@@ -20,10 +20,10 @@
                 @* これはデータが型に合わせてある程度最適な形で整形してくれるらしい(XSSなど防げる+カスタマイズ可能) *@
                 @* また、カラム名もforeach使わずに参照できるので、これを使うのが一般的 *@
                 @* なおmodelという引数はmでもなんでも良い *@
-                @Html.DisplayNameFor(model => model.title)
+                @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.sub_title)
+                @Html.DisplayNameFor(model => model.SubTitle)
             </th>
             <th></th>
         </tr>
@@ -32,10 +32,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.title)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.sub_title)
+                @Html.DisplayFor(modelItem => item.SubTitle)
             </td>
             <td>
                 @* 【リンク生成】タグヘルパー：asp-actionとasp-route-idについて*@
@@ -43,9 +43,9 @@
                 @* 作成結果例：<a href="/Samples/Edit/1">Edit</a>  *@
 
                 @* asp-xxxxといういろんなリンク生成のメソッドがあるので、何かに関連したリンクを生成するときは利用する *@
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

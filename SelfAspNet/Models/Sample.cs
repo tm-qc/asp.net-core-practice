@@ -6,11 +6,13 @@ namespace SelfAspNet.Models;
 
 public class Sample
 {
-    public int id { get; set; }
+    // カラム名(プロパティ)はC#の場合PascalCaseが主流
+    // 子に記載するリレーションの親の外部キーもNameIdと書くと自動で認識してくれる
+    public int Id { get; set; }
     // ビューの@Html.DisplayNameForで表示する文字をここでも設定できる
     [Display(Name = "タイトル")]
-    public string title { get; set; } = String.Empty;//初期値空文字
-    public string sub_title { get; set; } = "";//初期値空文字はこれでもいいらしい
+    public string Title { get; set; } = String.Empty;//初期値空文字
+    public string SubTitle { get; set; } = "";//初期値空文字はこれでもいいらしい
 
     // modelで表示を整形する方法
      
@@ -22,4 +24,12 @@ public class Sample
 
     // [DataType(DataType.Currency)]
     // public string price { get; set; } = 0;
+
+    // リレーションサンプル
+
+    // 1対多のリレーション(親→子)
+    // public ICollection<SampleRelation1> SampleRelation1 { get;} = new List<SampleRelation1>();
+    // C#12からは[]の書き方もできる
+    // 子を参照するだけなのでgetのみでOK
+    public ICollection<SampleRelation1> SampleRelation1 { get; } = [];
 }

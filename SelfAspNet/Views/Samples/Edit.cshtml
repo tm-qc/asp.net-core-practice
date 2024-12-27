@@ -17,16 +17,16 @@
             @* ユニークキーを特に更新箇所でルートパラメータやhiddenやinputにもたせるのはNG（id書き換えでデータ荒らし放題) *@
             @* また、ルートパラメータとhiddenやinput、クエリなどで同じパラメータ名があるとどれを受け取ってるかわからなくなるのでNG *@
             @* hiddenも今回スキャフォールディングで自動生成されてるが、セキュリティ的にも、そもそも的にも【大問題】なので開発者が危険なものは意識して対処しないといけない *@
-            @* <input type="hidden" asp-for="id" /> *@
+            @* <input type="hidden" asp-for="Id" /> *@
             <div class="form-group">
-                <label asp-for="title" class="control-label"></label>
-                <input asp-for="title" class="form-control" />
-                <span asp-validation-for="title" class="text-danger"></span>
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="sub_title" class="control-label"></label>
-                <input asp-for="sub_title" class="form-control" />
-                <span asp-validation-for="sub_title" class="text-danger"></span>
+                <label asp-for="SubTitle" class="control-label"></label>
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

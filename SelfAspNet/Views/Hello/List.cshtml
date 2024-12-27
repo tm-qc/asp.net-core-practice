@@ -9,18 +9,18 @@
 
 <table>
     <tr>
-        <th>id</th>
-        <th>title</th>
-        <th>sub_title</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>SubTitle</th>
     </tr>
     @* Model は、@model ディレクティブによって型付けされたモデルオブジェクト(List<T>)へのアクセスを提供する固定名 *@
     @* コントローラーでreturn view()してるsamplesになる *@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.id</td>
-            <td>@item.title</td>
-            <td>@item.sub_title</td>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
         </tr>
     }
 </table>

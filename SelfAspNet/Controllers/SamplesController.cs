@@ -38,23 +38,23 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples/Details/5
-        // リクエストデータと同じ名前の引数で自動で値を受け取れる(int? id)
-        public async Task<IActionResult> Details(int? id)
+        // リクエストデータと同じ名前の引数で自動で値を受け取れる(int? Id)
+        public async Task<IActionResult> Details(int? Id)
         {
-            if (id == null)
+            if (Id == null)
             {
                 // 404エラーを返す
                 return NotFound();
             }
 
             // idと一致するデータを取得。なければnullを返す
-            // FindAsync(id)でもいいらしい。こっちがシンプルで良さそう
+            // FindAsync(Id)でもいいらしい。こっちがシンプルで良さそう
 
             // FirstOrDefaultAsync：主キー以外で条件つけて検索できる
             // FindAsync：主キーで検索でき、キャッシュも残るのでエコ
             var sample = await _context.Samples
-                // .FirstOrDefaultAsync(m => m.id == id);
-                .FindAsync(id);
+                // .FirstOrDefaultAsync(m => m.Id == Id);
+                .FindAsync(Id);
             if (sample == null)
             {
                 return NotFound();
@@ -80,14 +80,14 @@ namespace SelfAspNet.Controllers
         // CSRF対策
         [ValidateAntiForgeryToken]
 
-        // [Bind("id,title,sub_title")]：必要なデータしか受け取らないことで、セキュリティを高める(オーバーポストを防ぐ)
+        // [Bind("Id,Title,SubTitle")]：必要なデータしか受け取らないことで、セキュリティを高める(オーバーポストを防ぐ)
         // ただし、idは不要：自動インクリメントされるため、外部から渡す必要はない。むしろ危険なので不要
         // bindはモデルのプロパティで自動できまるので、毎回しっかり開発者が受け取るべきものだけに整理しないといけない
 
         // Modelが変更されたら、Bindも変更しないといけない
         // コントローラーからは例えば引数の Sample sample でModelが判断できる
         // modelからはvs codeで例えばpublic class Sampleモデルを右クリックですべての参照を検索でみつけれる
-        public async Task<IActionResult> Create([Bind("title,sub_title")] Sample sample)
+        public async Task<IActionResult> Create([Bind("Title,SubTitle")] Sample sample)
         {
             // バリデーション問題なければ登録
             if (ModelState.IsValid)
@@ -100,14 +100,14 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? Id)
         {
-            if (id == null)
+            if (Id == null)
             {
                 return NotFound();
             }
 
-            var sample = await _context.Samples.FindAsync(id);
+            var sample = await _context.Samples.FindAsync(Id);
             if (sample == null)
             {
                 return NotFound();
@@ -120,7 +120,7 @@ namespace SelfAspNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,title,sub_title")] Sample sample)
+        public async Task<IActionResult> Edit(int Id, [Bind("Id,Title,SubTitle")] Sample sample)
         {
             // 【大問題】
             // 1.
@@ -135,9 +135,9 @@ namespace SelfAspNet.Controllers
             // - フロントからのユニークキーでDB更新させない
             // - ログイン情報と紐づけてそのデータで更新データを特定させる
 
-            // id=引数のint idでルートパラメータのidを受け取る
-            // sample.id=Bindのid(リクエストデータだがルートパラメータも受けとってる)
-            if (id != sample.id)
+            // Id=引数のint idでルートパラメータのidを受け取る
+            // sample.Id=Bindのid(リクエストデータだがルートパラメータも受けとってる)
+            if (Id != sample.Id)
             {
                 return NotFound();
             }
@@ -152,7 +152,7 @@ namespace SelfAspNet.Controllers
                 // 同じデータを違う人が同時更新した場合のエラーを検知(多分よほどのことがない限り起きない)
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SampleExists(sample.id)) //idを持ったデータがあるか確認
+                    if (!SampleExists(sample.Id)) //idを持ったデータがあるか確認
                     {
                         return NotFound();//データがない場合は404エラーを返す
                     }
@@ -169,15 +169,15 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? Id)
         {
-            if (id == null)
+            if (Id == null)
             {
                 return NotFound();
             }
 
             var sample = await _context.Samples
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == Id);
             if (sample == null)
             {
                 return NotFound();
@@ -191,9 +191,9 @@ namespace SelfAspNet.Controllers
         // (別に POST: Samples/Deleteでアクセスすればいいだけなので、メソッド名をDeleteConfirmed→DeleteにそもそもしてもOK)
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int Id)
         {
-            var sample = await _context.Samples.FindAsync(id);
+            var sample = await _context.Samples.FindAsync(Id);
             if (sample != null)
             {
                 _context.Samples.Remove(sample);
@@ -208,9 +208,9 @@ namespace SelfAspNet.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SampleExists(int id)
+        private bool SampleExists(int Id)
         {
-            return _context.Samples.Any(e => e.id == id);
+            return _context.Samples.Any(e => e.Id == Id);
         }
     }
 }

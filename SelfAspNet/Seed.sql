@@ -1,4 +1,5 @@
 DELETE FROM Samples;
+DBCC CHECKIDENT ('Samples', RESEED, 0)
 
 -- SelfAspNet データベースを使用（無くても動く）
 -- USE SelfAspNet;
@@ -11,7 +12,7 @@ DELETE FROM Samples;
 -- Insert文をまとめることで、1つのトランザクションで処理を行うことができるので、整合性が保てる
 -- (全部失敗 or　全部成功)
 -- Insertを複数回の方がオーバーヘッドが少ない
-INSERT INTO Samples (title, sub_title)
+INSERT INTO Samples (Title, SubTitle)
 VALUES
     (N'1番目のタイトル', N'1番目のサブタイトル'),
     (N'2番目のタイトル', N'2番目のサブタイトル'),
@@ -20,3 +21,13 @@ VALUES
     (N'5番目のタイトル', N'5番目のサブタイトル');
 
 SELECT * FROM Samples;
+
+
+DELETE FROM SampleRelation1;
+DBCC CHECKIDENT ('SampleRelation1', RESEED, 0);
+
+INSERT INTO SampleRelation1 (SampleId, RTitle)
+SELECT Id, N'リレーションタイトル' + CAST(Id AS NVARCHAR(10))
+FROM Samples;
+
+SELECT * FROM SampleRelation1;

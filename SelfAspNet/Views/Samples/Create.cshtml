@@ -22,14 +22,14 @@
                 @* これでlabelとinputのforとidを紐づけた形で生成される *@
                 @* inputのtypeもモデルのプロパティの型に応じて最適な type が選択され自動で決まる *@
                 @* inputのtypeを手動で制御したいときはモデルでアノテーションもあるがややこしいので、手書きでform書くのがいいかも *@
-                <label asp-for="title" class="control-label"></label>
-                <input asp-for="title" class="form-control" />
-                <span asp-validation-for="title" class="text-danger"></span>
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="sub_title" class="control-label"></label>
-                <input asp-for="sub_title" class="form-control" />
-                <span asp-validation-for="sub_title" class="text-danger"></span>
+                <label asp-for="SubTitle" class="control-label"></label>
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -14,5 +14,6 @@ namespace SelfAspNet.Models {
 
         // SampleモデルをDbsetしてSmaplesメソッドで操作出来るようにしている
         public required DbSet<Sample> Samples { get; set; }
+        public required DbSet<SampleRelation1> SampleRelation1 { get; set; }
     }
 }
