@@ -1,4 +1,12 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/* このファイルはScoped.cssという */
+/* .cshtmlと同じ名前の.cshtml.cssというファイルを用意すると同じ名前の.cshtmlだけにcssを適用できる */
+
+/* 今回の場合は SelfAspNet\Views\Shared\_Layout.cshtml.cssがSelfAspNet\Views\Shared\_Layout.cshtmlに読み込まれてる*/
+
+/* Scoped.cssはビルドのときにプロファイル名.style.cssという仮想ファイルが生成されるので、以下の読込が必要 */
+/* <link rel="stylesheet" href="~/SelfAspNet.styles.css" asp-append-version="true" /> */
+
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
