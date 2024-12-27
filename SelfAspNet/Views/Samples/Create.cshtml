@@ -42,6 +42,8 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+@* 個別テンプレートでコンテンツを読み込みたい場合は@section使う *@
+@* 今回は「SelfAspNet\Views\Shared\_ValidationScriptsPartial.cshtml」が読み込まれてる *@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

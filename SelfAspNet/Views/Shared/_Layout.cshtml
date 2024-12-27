@@ -49,6 +49,7 @@
         @* launchSettings.jsonの設定を確認 *@
         <p>Environment: @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</p>
         <main role="main" class="pb-3">
+            @* ここで個別のテンプレート読込してる *@
             @RenderBody()
         </main>
     </div>
