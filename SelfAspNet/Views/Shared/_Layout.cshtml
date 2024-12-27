@@ -62,6 +62,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @* テンプレート間の読込について親がわの大枠にはこれが必要 *@
+    @* これがなくて子の方に@section Scriptsみたいな読込がないとエラーになる *@
     @await RenderSectionAsync("Scripts", required: false)
 
     @* js読込サンプル *@
