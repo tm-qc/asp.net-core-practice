@@ -107,11 +107,36 @@ namespace SelfAspNet.Controllers
                 return NotFound();
             }
 
-            var sample = await _context.Samples.FindAsync(Id);
+            // リレーションのデータ取得について
+
+            // ↓これではリレーションのデータ取れない(データがないだけでエラーにはならない)
+            // var sample = await _context.Samples.FindAsync(Id);   
+
+            // なぜ取れないか
+            // 即時読込か明示的な読込で明示して取得する必要がある
+            // なお、基本使わないが遅延読込の設定がされていれば即時読込の記載がなくてもリレーションのデータはとれる
+            
+            // ↓以下のいずれかでリレーションのデータも取れる
+
+            // 即時読込(推奨)
+            // IncludeではFindAsyncはつかえないので、FirstOrDefaultAsyncをつかわないといけない
+            var sample = await _context.Samples.Include(s => s.SampleRelation1).FirstOrDefaultAsync(s => s.Id == Id);
+
+            // 明示的な読込(あまりつかわない)
+            // var sample = await _context.Samples.FindAsync(Id);//FirstOrDefaultAsync(s => s.Id == Id)でもOK
+            // await _context.Entry(sample).Collection(s => s.SampleRelation1).LoadAsync();//ちなみにここでnull警告の対処も必要でちょっとめんどくさい
+
+            // 遅延読込(不要)
+            // 使うまでにはインストールまたは、ILazyLoaderを使う必要があって、冗長で難しい
+            // またメリットとがInclude省略しかなく、デメリットのN+1もあるし、遅延読込は使わなくていい印象
+            
             if (sample == null)
             {
                 return NotFound();
             }
+
+            var sampleRelation = sample.SampleRelation1;
+            Console.WriteLine("リレーションテスト：ここで止めるとデバッグで、sampleRelationでデータ取れてるか確認できる");
             return View(sample);
         }
 
