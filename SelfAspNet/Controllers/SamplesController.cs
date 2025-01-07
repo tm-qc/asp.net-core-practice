@@ -33,18 +33,31 @@ namespace SelfAspNet.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // 型指定の選定とやり方メモ
+
+            // まずvarで記載して、デバッグを動かし、[]の中に書いてある型で指定するのがいいかも
+            // コンパイル時の決定なので間違いない。
+
+            // いろんな型があるが、特に狙いない限り、表示されてるものでＯＫ
+
+            // 最初からvarでいいやんってなるかもしれないが、そこはPJの方針による
+            // 個人的にはvarで型推論で書くより、最初から固定で書いて置く方が、後々予期せぬことが起きないと思うので型指定はしたい
+
             // LINQサンプル
             // クエリ構文
             // シンプルだがすべての問い合わせは表現できない。またコンパイル時にメソッド構文に置換され実行される。
-            var samplesLinqQuery = from s in _context.Samples where s.Id == 5 select s;
+            IQueryable<Sample> samplesLinqQuery = from s in _context.Samples where s.Id == 5 select s;
 
             // メソッド構文
             // 基本はこれを使う方がいい
             // やや冗長だが、LINQの機能をすべて使える
-            var samplesLinqMethod = _context.Samples.Where(s => s.Id == 3).Select(s => s);
+            IQueryable<Sample> samplesLinqMethod = _context.Samples.Where(s => s.Id == 3).Select(s => s);
             Console.WriteLine("ここでデバックとめたらLINQの結果が見れる");
 
-            ViewBag.Mes = "ViewBagにデータを入れるとRazorビューで参照できます";
+            string sampleStr = "string";
+            int sampleInt = 123;
+
+            ViewBag.Mes = $"ViewBagにデータを入れるとRazorビューで参照できます{sampleStr}{sampleInt}";
             return View(await _context.Samples.ToListAsync());
         }
 
