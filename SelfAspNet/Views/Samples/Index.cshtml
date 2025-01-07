@@ -51,3 +51,20 @@
 }
     </tbody>
 </table>
+@* ページャー(自分でHTML書いて作成) *@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        @if (ViewBag.currentPage > 1)
+        {
+            <li class="page-item"><a class="page-link" asp-route-page="@(ViewBag.currentPage - 1)">前へ</a></li>
+        }
+        @for (int i = 1; i <= ViewBag.totalPage; i++)
+        {
+            <li class="page-item @(i == ViewBag.currentPage ? "active" : "")"><a class="page-link" asp-route-page="@i">@i</a></li>
+        }
+        @if (ViewBag.currentPage < ViewBag.totalPage)
+        {
+            <li class="page-item"><a class="page-link" asp-route-page="@(ViewBag.currentPage + 1)">次へ</a></li>
+        }
+    </ul>
+</nav>

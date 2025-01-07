@@ -18,7 +18,7 @@ namespace SelfAspNet.Controllers
             _context = context;
         }
 
-        // GET: Samples
+        // GET: Samples?page=
         // - <IActionResult>：非同期(async await)の戻り値の型
         // - awaitの処理が終わって次の処理に行く。非同期と違い同期処理にする
         //   (非同期処理って命名がわかりづらいが、要は同期処理)
@@ -31,7 +31,7 @@ namespace SelfAspNet.Controllers
         // 非同期に効率よく処理しつつ、最終的に同期されて順番に処理をするということ
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             // 型指定の選定とやり方メモ
 
@@ -58,7 +58,43 @@ namespace SelfAspNet.Controllers
             int sampleInt = 123;
 
             ViewBag.Mes = $"ViewBagにデータを入れるとRazorビューで参照できます{sampleStr}{sampleInt}";
-            return View(await _context.Samples.ToListAsync());
+ 
+            // ページャー表示
+            List<Sample> samplesList = await Pager(page).ToListAsync();
+            return View(samplesList);
+
+            // 全件表示(ページャーなし)
+            // return View(await _context.Samples.ToListAsync());
+        }
+
+
+        /// <summary>
+        /// ページャーの関数
+        /// 現在のページに合わせたデータを取得
+        /// 
+        /// IQueryableはデータベース操作の型
+        /// </summary>
+        /// <param name="page">現在のぺージ数</param>
+        /// <returns>表示データ</returns>
+        public IQueryable<Sample> Pager(int page = 1){
+            // 1ページあたりのデータの表示量
+            int pageSize = 3;
+            // 1:ユーザ的には1ページ目が最初
+            // -1:DBのオフセット、Skipで参照するときは0が1なので、page - 1となる
+            int pageNum = page - 1;
+        
+            // 全表示データ数をカウント
+            int totalConut = _context.Samples.Count();
+            // 現在のページに表示するデータを取得
+            IQueryable<Sample> samplesList = _context.Samples.OrderBy(s => s.Id).Skip(pageSize * pageNum).Take(pageSize);
+            
+            // 現在のページ数をビューに渡す
+            ViewBag.currentPage = page;
+            // 総ページ数を計算
+            // Math.Ceilingで小数点以下を切り上げ
+            // 例えば10件データがある場合は10/3=3.3333333333333335となり、この場合4ページとなるため
+            ViewBag.totalPage = (int)Math.Ceiling(totalConut / (double)pageSize);
+            return samplesList;
         }
 
         // GET: Samples/Details/5
