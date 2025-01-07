@@ -33,6 +33,17 @@ namespace SelfAspNet.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // LINQサンプル
+            // クエリ構文
+            // シンプルだがすべての問い合わせは表現できない。またコンパイル時にメソッド構文に置換され実行される。
+            var samplesLinqQuery = from s in _context.Samples where s.Id == 5 select s;
+
+            // メソッド構文
+            // 基本はこれを使う方がいい
+            // やや冗長だが、LINQの機能をすべて使える
+            var samplesLinqMethod = _context.Samples.Where(s => s.Id == 3).Select(s => s);
+            Console.WriteLine("ここでデバックとめたらLINQの結果が見れる");
+
             ViewBag.Mes = "ViewBagにデータを入れるとRazorビューで参照できます";
             return View(await _context.Samples.ToListAsync());
         }
