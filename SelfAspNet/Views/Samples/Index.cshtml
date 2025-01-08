@@ -1,4 +1,6 @@
-@model IEnumerable<SelfAspNet.Models.Sample>
+@* @model IEnumerable<SelfAspNet.Models.Sample> *@
+@model X.PagedList.IPagedList<SelfAspNet.Models.Sample>
+@using X.PagedList.Mvc.Core
 
 @{
     ViewData["Title"] = "Index";
@@ -20,10 +22,12 @@
                 @* これはデータが型に合わせてある程度最適な形で整形してくれるらしい(XSSなど防げる+カスタマイズ可能) *@
                 @* また、カラム名もforeach使わずに参照できるので、これを使うのが一般的 *@
                 @* なおmodelという引数はmでもなんでも良い *@
-                @Html.DisplayNameFor(model => model.Title)
+
+                @* modelの型がページネーションのプラグインの影響で変更になりX.PagedList.IPagedListになったので、 First()を追加しないと参照エラーになる*@
+                @Html.DisplayNameFor(model => model.First().Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SubTitle)
+                @Html.DisplayNameFor(model => model.First().SubTitle)
             </th>
             <th></th>
         </tr>
@@ -51,20 +55,19 @@
 }
     </tbody>
 </table>
-@* ページャー(自分でHTML書いて作成) *@
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
-        @if (ViewBag.currentPage > 1)
-        {
-            <li class="page-item"><a class="page-link" asp-route-page="@(ViewBag.currentPage - 1)">前へ</a></li>
-        }
-        @for (int i = 1; i <= ViewBag.totalPage; i++)
-        {
-            <li class="page-item @(i == ViewBag.currentPage ? "active" : "")"><a class="page-link" asp-route-page="@i">@i</a></li>
-        }
-        @if (ViewBag.currentPage < ViewBag.totalPage)
-        {
-            <li class="page-item"><a class="page-link" asp-route-page="@(ViewBag.currentPage + 1)">次へ</a></li>
-        }
-    </ul>
-</nav>
+<!-- ✅ Nugetのページネイション用ライブラリ：自動ページネーションUI -->
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+    @* 今回CSSはデフォルトで反映してて、特に触ってないが、Nugetのページネイション用ライブラリでHtml生成したらCSS反映しなかった *@
+    @* そのため、new PagedListRenderOptionsでCSS反映をした *@
+    @* new PagedListRenderOptionsは独特すぎて使いにくい。柔軟な対応は難しい印象 *@
+    new PagedListRenderOptions
+    {
+        LiElementClasses = new string[] { "page-item" }, // <li> 要素のクラス
+        PageClasses = new string[] { "page-link" },      // <a> 要素のクラス
+        ActiveLiElementClass = "active",                // アクティブな <li> 要素のクラス
+        // 他にも様々なオプションがあります
+        // 例えば、PreviousPageText, NextPageText, DisplayPageCount など
+        // 必要に応じてカスタマイズしてください。
+    })
+</div>

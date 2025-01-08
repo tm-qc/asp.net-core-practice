@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SelfAspNet.Models;
 
+// ページネーションのプラグイン使うために追加
+using X.PagedList;//型IPagedListを使うため
+using X.PagedList.EF;//メソッドToPagedListAsyncを使うため
+
 namespace SelfAspNet.Controllers
 {
     public class SamplesController : Controller
@@ -60,8 +64,17 @@ namespace SelfAspNet.Controllers
             ViewBag.Mes = $"ViewBagにデータを入れるとRazorビューで参照できます{sampleStr}{sampleInt}";
  
             // ページャー表示
-            List<Sample> samplesList = await Pager(page).ToListAsync();
-            return View(samplesList);
+            // List<Sample> samplesList = await Pager(page).ToListAsync();
+            // return View(samplesList);
+
+            // ページャー(X.PagedList.Mvc.Coreを利用し作成)
+
+            // Nugetのページネイション用ライブラリのメリット
+            // Pager関数も不要
+            // ビュー側も一行でHTML生成ですごく短く書ける
+            int pageSize = 3;
+            IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
+            return View(samplesNugetList);
 
             // 全件表示(ページャーなし)
             // return View(await _context.Samples.ToListAsync());

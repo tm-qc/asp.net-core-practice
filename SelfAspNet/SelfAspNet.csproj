@@ -41,6 +41,11 @@
         -->
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <!-- Nugetのページネイション用ライブラリ：コントローラーでのデータ操作用 -->
+    <PackageReference Include="X.PagedList.EF" Version="10.5.7" />
+    <!-- Nugetのページネイション用ライブラリ：ビュー用 -->
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.7" />
+
 
   </ItemGroup>
 
