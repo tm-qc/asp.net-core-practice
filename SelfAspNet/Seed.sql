@@ -1,3 +1,5 @@
+-- SamplesとSampleRelation1テーブルを空にして、オートインクリメントし初期データを投入する
+-- DBCCはSQL Server専用なので、MySQLの場合は使えない
 DELETE FROM Samples;
 DBCC CHECKIDENT ('Samples', RESEED, 0)
 

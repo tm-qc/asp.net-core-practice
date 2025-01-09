@@ -13,7 +13,30 @@ builder.Services.AddDbContext<MyContext>(options =>
     )
 );
 
-var app = builder.Build();
+WebApplication app = builder.Build();
+
+// SampleSeed.csでデータを投入するために追加
+// DIコンテナ(機能させるためのクラス)の注入準備でscope作成
+using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
+{
+    // ServiceProviderはこんなものを主に呼び出せ、起動時に設定などできる
+    // 
+    //  一般的によく使われるもの
+    // 
+    //  データベースコンテキスト (MyContext)
+    //  ロガー (ILogger)
+    //  認証関連 (UserManager)
+    //  カスタムサービス (独自のビジネスロジック)
+    //  設定情報 (IConfiguration)
+
+    // scopeにServiceProvider(アプリ起動時に動く機能)を注入
+    IServiceProvider provider = scope.ServiceProvider;
+
+    // SampleSeed.csのInitializeにprovider(ServiceProvider)を渡してMyContextを呼び出せるようにする
+    // SampleSeed.InitializeのSampleSeedは動かしたいクラス名になる
+    // Initializeがasyncもってるのでawait追加が必要
+    await SampleSeed.Initialize(provider);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
