@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using SelfAspNet.Models;
 
 // ページネーションのプラグイン使うために追加
@@ -291,19 +292,41 @@ namespace SelfAspNet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int Id)
         {
-            var sample = await _context.Samples.FindAsync(Id);
-            if (sample != null)
+            // トランザクションサンプル
+            // トランザクションは複数テーブルで整合性を保たないといけないときに使う
+            // 全部成功すれば実行、一個でも失敗したらロールバックで戻すということになる
+            // 
+            // ここではDeleteしかないが、あくまでトランザクションの雛形と参考として記載しておく
+            using(IDbContextTransaction tx = await _context.Database.BeginTransactionAsync())
             {
-                _context.Samples.Remove(sample);
+                try
+                {
+                    // varは型推論＋Null許容なので?は不要
+                    // 型指定すると?が警告回避で必要
+                    // 
+                    // 型指定するとSampleはクラスなのでNullのはずないよね？という警告が出てしまうが、
+                    // 実際はデータ取得後の結果なので、?で回避してOK
+                    Sample? sample = await _context.Samples.FindAsync(Id);
+                    if (sample != null)
+                    {
+                        _context.Samples.Remove(sample);
 
-                // ↓今までeditとcreateではifの中でSaveChangesAsyncしていたが、ここではしてないのは謎です
-                // コードの一貫性やデータなくてもSaveChangesAsync実行するのが、ぱっと見無駄に見えるので、個人的には好ましくない
-                // await _context.SaveChangesAsync();
-                // return RedirectToAction(nameof(Index));
+                        // ↓今までeditとcreateではifの中でSaveChangesAsyncしていたが、ここではしてないのは謎です
+                        // コードの一貫性やデータなくてもSaveChangesAsync実行するのが、ぱっと見無駄に見えるので、個人的には好ましくない
+                        // await _context.SaveChangesAsync();
+                        // return RedirectToAction(nameof(Index));
+                    }
+
+                    await _context.SaveChangesAsync();
+                    await tx.CommitAsync();//トランザクションコミット：ここでSQLが実際に反映する
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (System.Exception)
+                {
+                    await tx.RollbackAsync();//トランザクションロールバック：失敗なのでSQLを反映しないで終了
+                    throw;// 元の例外情報を保持したまま例外をスロー
+                }
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool SampleExists(int Id)
