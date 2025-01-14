@@ -11,15 +11,15 @@ using SelfAspNet.Models;
 namespace SelfAspNet.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20241227074125_InitSample")]
-    partial class InitSample
+    [Migration("20250114020505_UpdateSamples")]
+    partial class UpdateSamples
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -33,7 +33,6 @@ namespace SelfAspNet.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("SubTitle")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

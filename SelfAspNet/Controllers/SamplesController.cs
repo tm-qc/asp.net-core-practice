@@ -170,7 +170,10 @@ namespace SelfAspNet.Controllers
                 await _context.SaveChangesAsync();//コンテキストの内容を非同期でDBに新規データを保存
                 return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
             }
-            return View(sample);//バリデーション失敗の時はsample/createを表示
+            // バリデーション失敗の時はsample/createを表示
+            // View()指定なしで処理元のページ戻る
+            // sampleオブジェクトを引数に指定しているので、バリデーションエラーがある場合はそのエラーが表示されるし、元の入力値も保持される
+            return View(sample);
         }
 
         // GET: Samples/Edit/5
