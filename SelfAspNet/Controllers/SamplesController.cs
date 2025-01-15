@@ -12,6 +12,9 @@ using SelfAspNet.Models;
 using X.PagedList;//型IPagedListを使うため
 using X.PagedList.EF;//メソッドToPagedListAsyncを使うため
 
+// Filterサンプル(MyLogAttributeをつかうため)
+using SelfAspNet.Filters;
+
 namespace SelfAspNet.Controllers
 {
     public class SamplesController : Controller
@@ -35,7 +38,10 @@ namespace SelfAspNet.Controllers
         
         // 非同期に効率よく処理しつつ、最終的に同期されて順番に処理をするということ
 
-
+        // Filter定義：これでMyLogAttributeが動く
+        // Program.csでアプリ全体に設定もできる
+        // 今回はメソッドでSamplesにアクセスしたときに動くようにした
+        [MyLog]
         public async Task<IActionResult> Index(int page = 1)
         {
             // 型指定の選定とやり方メモ
