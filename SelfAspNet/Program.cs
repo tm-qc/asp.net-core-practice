@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // アプリ全体にフィルターを適用する場合はここに設定(設定後はアプリ再起動が必要)
 builder.Services.AddControllersWithViews(
-    options => options.Filters.Add<MyLogAttribute>()
+    // options => options.Filters.Add<MyLogAttribute>()
 );
 
 // モデルコンテキストを登録

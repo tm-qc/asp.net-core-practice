@@ -41,7 +41,7 @@ namespace SelfAspNet.Controllers
         // Filter定義：これでMyLogAttributeが動く
         // Program.csでアプリ全体に設定もできる
         // 今回はメソッドでSamplesにアクセスしたときに動くようにした
-        // [MyLog]
+        [MyLog]
         public async Task<IActionResult> Index(int page = 1)
         {
             // 型指定の選定とやり方メモ
