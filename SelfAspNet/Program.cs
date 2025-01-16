@@ -1,10 +1,14 @@
 using Microsoft.EntityFrameworkCore;//UseSqlServerにひつようだった
+using SelfAspNet.Filters;
 using SelfAspNet.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+// アプリ全体にフィルターを適用する場合はここに設定(設定後はアプリ再起動が必要)
+builder.Services.AddControllersWithViews(
+    options => options.Filters.Add<MyLogAttribute>()
+);
 
 // モデルコンテキストを登録
 builder.Services.AddDbContext<MyContext>(options =>
