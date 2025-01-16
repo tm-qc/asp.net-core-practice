@@ -29,6 +29,7 @@ public class MyLogAttribute : Attribute, IActionFilter
     {
         Console.WriteLine($"【After】{context.ActionDescriptor.DisplayName}が実行されました。");
     }
+    
 }
 
 // ActionFilterAttributeクラスで書き換えた場合
