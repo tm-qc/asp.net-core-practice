@@ -12,9 +12,13 @@
     <a asp-action="Create">Create New</a>
 </p>
 <p>@ViewBag.Mes</p>
+@* キャッシュテストの現在時刻：ResponseCacheがある場合にページ遷移で時刻が変わらない(F5リロードの場合は変わる) *@
+<p>@DateTime.Now.ToString()</p>
+
 @* asp-append-versionで画像のキャッシュをクリアして更新されない問題を解決できる *@
 @* 画像はwwwroot配下に設置する *@
 <img src="~/images/rengoku.png" alt="rengoku.png" asp-append-version="true"/>
+
 <table class="table">
     <thead>
         <tr>

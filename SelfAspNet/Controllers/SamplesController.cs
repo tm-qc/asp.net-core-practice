@@ -44,6 +44,11 @@ namespace SelfAspNet.Controllers
         // Program.csでアプリ全体に設定もできる
         // 今回はメソッドでSamplesにアクセスしたときに動くようにした
         // [MyLog]
+
+        // ResponseCache属性
+        // キャッシュすることでパフォーマンスをあげる
+        // ただし変更が表示に反映しない原因になるので、変更がすくないぺーじにしか使えない
+        // [ResponseCache(Duration = 60)]//60秒キャッシュ
         public async Task<IActionResult> Index(int page = 1)
         {
             // 型指定の選定とやり方メモ
