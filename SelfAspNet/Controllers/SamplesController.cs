@@ -17,6 +17,8 @@ using SelfAspNet.Filters;
 
 namespace SelfAspNet.Controllers
 {
+    // コントローラー単位でフィルター適用の場合
+    [MyLog]
     public class SamplesController : Controller
     {
         private readonly MyContext _context;
@@ -41,7 +43,7 @@ namespace SelfAspNet.Controllers
         // Filter定義：これでMyLogAttributeが動く
         // Program.csでアプリ全体に設定もできる
         // 今回はメソッドでSamplesにアクセスしたときに動くようにした
-        [MyLog]
+        // [MyLog]
         public async Task<IActionResult> Index(int page = 1)
         {
             // 型指定の選定とやり方メモ
