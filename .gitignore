@@ -1,3 +1,10 @@
 .vs/
+
+# これでまとめてもOK
+# **/bin/
+# **/obj/
+
 SelfAspNet/bin/
 SelfAspNet/obj/
+CoreIdentity/bin/
+CoreIdentity/obj/
