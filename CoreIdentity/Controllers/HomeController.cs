@@ -21,7 +21,17 @@ public class HomeController : Controller
 
     // 認証ライブラリ ASP.NET CORE Identity をインストールし、
     // Authorize属性をつけるとログインページに誘導される
-    [Authorize]
+    // 
+    // ちなみにユーザー登録は存在するメールアドレスで登録しないと、ログインできないっぽい
+    // AspNetUsersテーブルのEmailConfirmedカラムが0になってたので、1にしてみたらログインできた
+    // 
+    // UPDATEのSQLサンプル
+    // UPDATE [dbo].[AspNetUsers]
+    // SET [EmailConfirmed] = 1
+    // WHERE [Email] = 't-mine-admin@rustic.co.jp';
+    // 
+    // ロール機能テスト：ログイン済みでロールがAdminのユーザだけ閲覧可能にした
+    [Authorize(Roles = "Admin")]
     public IActionResult Privacy()
     {
         return View();
