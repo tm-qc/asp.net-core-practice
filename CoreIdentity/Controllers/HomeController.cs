@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CoreIdentity.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CoreIdentity.Controllers;
 
@@ -18,6 +19,9 @@ public class HomeController : Controller
         return View();
     }
 
+    // 認証ライブラリ ASP.NET CORE Identity をインストールし、
+    // Authorize属性をつけるとログインページに誘導される
+    [Authorize]
     public IActionResult Privacy()
     {
         return View();
