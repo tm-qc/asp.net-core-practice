@@ -60,16 +60,30 @@ public class HelloController : Controller
       // var samples = _db.Samples;
       IEnumerable<SelfAspNet.Models.Sample> samples = _db.Samples;
 
-      //型のメモ
-      // 遅延実行を活用して効率良くデータ処理をしたい → IEnumerable<T>
-      // データをメモリにロードして、柔軟に操作したい → List<T>
-
-      // どっち使う？
-      // ビューに渡す場合やデータを複数回使う場合:
-      // → List<Sample> samples = _db.Samples.ToList();
-
-      // クエリを遅延実行(必要な時だけ取得)してデータベース負荷を軽減したい場合:
-      // → IEnumerable<SelfAspNet.Models.Sample> samples = _db.Samples;
+      //  型のメモ
+      // IQueryable			
+      // 	遅延実行なので必要な時に実行されるのでエコ		
+      // 	遅延実行は即時実行より、起動タイミングがつかみづらいので、もし何かあったらデバッグが難しいのがデメリット(リレーション設定のメモに書いてる)		
+      // 	データベース側でリソースを使うので、メモリ負荷は少ない		
+      // 	IEnumerableより後に出たので、IEnumerableが出てくることが多いが、IQueryableを優先していい		
+      // 	大規模データ向け(数万件以上、パフォーマンスがわるくメモリ消費が気になるとき)		
+            
+      //  IEnumerable			
+      // 	即時実行		
+      // 	即時実行なのでデバッグはわかりやすい		
+      // 	メモリ上で動く		
+      // 	小規模データ向け(数千件以下、パフォーマンスに影響なくメモリ消費が気にならない)		
+            
+      // List<T>			
+      // 	即時実行		
+      // 	即時実行なのでデバッグはわかりやすい		
+      // 	メモリ上で動く		
+      // 	コレクションを使う場合やビューに返すとき		
+            
+      // 所感			
+      // 	PJ方針によって違うと思うが、個人的な使い分けは以下		
+      // 	初心者は IEnumerableの方が安心かもしれない		
+      // 	IQueryableはデータが大きくなるところには優先的に使う		
 
       // List<T>の中身のイメージ
       // List<Sample> samples = new List<Sample>()
