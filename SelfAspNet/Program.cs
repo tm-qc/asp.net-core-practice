@@ -76,7 +76,8 @@ using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
 }
 
 // ミドルウェア登録基本
-app.UseMiddleware<HeadersInfoMiddleware>();
+// app.UseMiddleware<HeadersInfoMiddleware>();
+app.UseHeadersInfo();
 
 app.Run();
 

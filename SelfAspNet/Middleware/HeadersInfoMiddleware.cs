@@ -28,7 +28,7 @@ public class HeadersInfoMiddleware
         // ===Request Headers Info===の後に改行追加
         str.AppendLine("===Request Headers Info===");
         // 目印
-        str.Append("[Middleware自作テストログ]").AppendLine();
+        str.Append("[Middleware自作テストログ😶]").AppendLine();
 
         // リクエストの情報ごとに改行を追加する
         foreach (var header in context.Request.Headers)
