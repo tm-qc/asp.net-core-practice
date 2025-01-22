@@ -17,7 +17,7 @@ public class HeadersInfoMiddleware
     /// <summary>
     /// HttpContextでHTTPリクエストに関するすべてのHTTP固有の情報を取得し書き出す
     /// </summary>
-    /// <param name="context"></param>
+    /// <param name="context">HTTPリクエスト時の情報</param>
     /// <returns></returns>
     public async Task InvokeAsync(HttpContext context)
     {
