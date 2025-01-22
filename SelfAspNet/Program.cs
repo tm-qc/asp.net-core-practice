@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;//UseSqlServerにひつようだった
 using SelfAspNet.Filters;
 using SelfAspNet.Models;
+using SelfAspNet.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,13 @@ builder.Services.AddDbContext<MyContext>(options =>
         builder.Configuration.GetConnectionString("MyContext")
     )
 );
+
+// リポジトリを登録
+builder.Services.AddTransient<
+    ISampleRepository, 
+    SampleRepository
+>();
+
 
 WebApplication app = builder.Build();
 

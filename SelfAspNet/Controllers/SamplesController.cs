@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using SelfAspNet.Models;
+using SelfAspNet.Repository;
 
 // ページネーションのプラグイン使うために追加
 using X.PagedList;//型IPagedListを使うため
@@ -22,10 +23,12 @@ namespace SelfAspNet.Controllers
     public class SamplesController : Controller
     {
         private readonly MyContext _context;
+        private readonly ISampleRepository _rep;
 
-        public SamplesController(MyContext context)
+        public SamplesController(MyContext context,ISampleRepository rep)
         {
             _context = context;
+            _rep = rep;
         }
 
         // GET: Samples?page=
@@ -49,49 +52,67 @@ namespace SelfAspNet.Controllers
         // キャッシュすることでパフォーマンスをあげる
         // ただし変更が表示に反映しない原因になるので、変更がすくないぺーじにしか使えない
         // [ResponseCache(Duration = 60)]//60秒キャッシュ
+        // public async Task<IActionResult> Index(int page = 1)
+        // {
+        //     // 型指定の選定とやり方メモ
+
+        //     // まずvarで記載して、デバッグを動かし、[]の中に書いてある型で指定するのがいいかも
+        //     // コンパイル時の決定なので間違いない。
+
+        //     // いろんな型があるが、特に狙いない限り、表示されてるものでＯＫ
+
+        //     // 最初からvarでいいやんってなるかもしれないが、そこはPJの方針による
+        //     // 個人的にはvarで型推論で書くより、最初から固定で書いて置く方が、後々予期せぬことが起きないと思うので型指定はしたい
+
+        //     // LINQサンプル
+        //     // クエリ構文
+        //     // シンプルだがすべての問い合わせは表現できない。またコンパイル時にメソッド構文に置換され実行される。
+        //     IQueryable<Sample> samplesLinqQuery = from s in _context.Samples where s.Id == 5 select s;
+
+        //     // メソッド構文
+        //     // 基本はこれを使う方がいい
+        //     // やや冗長だが、LINQの機能をすべて使える
+        //     IQueryable<Sample> samplesLinqMethod = _context.Samples.Where(s => s.Id == 3).Select(s => s);
+        //     Console.WriteLine("ここでデバックとめたらLINQの結果が見れる");
+
+        //     string sampleStr = "string";
+        //     int sampleInt = 123;
+
+        //     ViewBag.Mes = $"ViewBagにデータを入れるとRazorビューで参照できます{sampleStr}{sampleInt}";
+ 
+        //     // ページャー表示
+        //     // List<Sample> samplesList = await Pager(page).ToListAsync();
+        //     // return View(samplesList);
+
+        //     // ページャー(X.PagedList.Mvc.Coreを利用し作成)
+
+        //     // Nugetのページネイション用ライブラリのメリット
+        //     // Pager関数も不要
+        //     // ビュー側も一行でHTML生成ですごく短く書ける
+        //     int pageSize = 3;
+        //     IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
+        //     return View(samplesNugetList);
+
+        //     // 全件表示(ページャーなし)
+        //     // return View(await _context.Samples.ToListAsync());
+        // }
+
+        // リポジトリからアクション呼び出すバージョン(index一覧ページ)
+
+        /// <summary>
+        /// index一覧ページ
+        /// </summary>
+        /// <param name="page">現在のページ数</param>
+        /// <returns>表示データ</returns>
         public async Task<IActionResult> Index(int page = 1)
         {
-            // 型指定の選定とやり方メモ
+            // 元のコード
+            // int pageSize = 3;
+            // IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
+            // return View(samplesNugetList);
 
-            // まずvarで記載して、デバッグを動かし、[]の中に書いてある型で指定するのがいいかも
-            // コンパイル時の決定なので間違いない。
-
-            // いろんな型があるが、特に狙いない限り、表示されてるものでＯＫ
-
-            // 最初からvarでいいやんってなるかもしれないが、そこはPJの方針による
-            // 個人的にはvarで型推論で書くより、最初から固定で書いて置く方が、後々予期せぬことが起きないと思うので型指定はしたい
-
-            // LINQサンプル
-            // クエリ構文
-            // シンプルだがすべての問い合わせは表現できない。またコンパイル時にメソッド構文に置換され実行される。
-            IQueryable<Sample> samplesLinqQuery = from s in _context.Samples where s.Id == 5 select s;
-
-            // メソッド構文
-            // 基本はこれを使う方がいい
-            // やや冗長だが、LINQの機能をすべて使える
-            IQueryable<Sample> samplesLinqMethod = _context.Samples.Where(s => s.Id == 3).Select(s => s);
-            Console.WriteLine("ここでデバックとめたらLINQの結果が見れる");
-
-            string sampleStr = "string";
-            int sampleInt = 123;
-
-            ViewBag.Mes = $"ViewBagにデータを入れるとRazorビューで参照できます{sampleStr}{sampleInt}";
- 
-            // ページャー表示
-            // List<Sample> samplesList = await Pager(page).ToListAsync();
-            // return View(samplesList);
-
-            // ページャー(X.PagedList.Mvc.Coreを利用し作成)
-
-            // Nugetのページネイション用ライブラリのメリット
-            // Pager関数も不要
-            // ビュー側も一行でHTML生成ですごく短く書ける
-            int pageSize = 3;
-            IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
-            return View(samplesNugetList);
-
-            // 全件表示(ページャーなし)
-            // return View(await _context.Samples.ToListAsync());
+            // リポジトリから処理を呼び出してるコード
+            return View(await _rep.GetAllPagerAsync(page));
         }
 
 
@@ -158,6 +179,12 @@ namespace SelfAspNet.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sample">入力データ</param>
+        /// <returns>成功時はindexへ、失敗時はsmapleオブジェクトをもって登録画面へ</returns>
+
         // POST: Samples/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -174,13 +201,29 @@ namespace SelfAspNet.Controllers
         // Modelが変更されたら、Bindも変更しないといけない
         // コントローラーからは例えば引数の Sample sample でModelが判断できる
         // modelからはvs codeで例えばpublic class Sampleモデルを右クリックですべての参照を検索でみつけれる
+
+        // public async Task<IActionResult> Create([Bind("Title,SubTitle")] Sample sample)
+        // {
+        //     // バリデーション問題なければ登録
+        //     if (ModelState.IsValid)
+        //     {
+        //         _context.Add(sample);//コンテキストにsampleオブジェクトを追加
+        //         await _context.SaveChangesAsync();//コンテキストの内容を非同期でDBに新規データを保存
+        //         return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
+        //     }
+        //     // バリデーション失敗の時はsample/createを表示
+        //     // View()指定なしで処理元のページ戻る
+        //     // sampleオブジェクトを引数に指定しているので、バリデーションエラーがある場合はそのエラーが表示されるし、元の入力値も保持される
+        //     return View(sample);
+        // }
+        
+        //リポジトリからアクション呼び出すバージョン(新規登録機能)
         public async Task<IActionResult> Create([Bind("Title,SubTitle")] Sample sample)
         {
             // バリデーション問題なければ登録
             if (ModelState.IsValid)
             {
-                _context.Add(sample);//コンテキストにsampleオブジェクトを追加
-                await _context.SaveChangesAsync();//コンテキストの内容を非同期でDBに新規データを保存
+                await _rep.CreateAsync(sample);
                 return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
             }
             // バリデーション失敗の時はsample/createを表示
@@ -284,6 +327,7 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Samples/Delete/5
+
         public async Task<IActionResult> Delete(int? Id)
         {
             if (Id == null)
