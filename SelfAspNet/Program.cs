@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;//UseSqlServerにひつようだった
 using SelfAspNet.Filters;
 using SelfAspNet.Models;
 using SelfAspNet.Repository;
+using SelfAspNet.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -73,6 +74,9 @@ using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
     // Initializeがasyncもってるのでawait追加が必要
     await SampleSeed.Initialize(provider);
 }
+
+// ミドルウェア登録基本
+app.UseMiddleware<HeadersInfoMiddleware>();
 
 app.Run();
 
