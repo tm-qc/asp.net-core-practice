@@ -24,6 +24,11 @@ builder.Services.AddTransient<
     SampleRepository
 >();
 
+// リポジトリ登録応用
+// IServiceCollection AddSampleRepositoryがある場合
+// 以下のように短く書けるらしい
+// builder.Services.AddSampleRepository();
+
 
 WebApplication app = builder.Build();
 
