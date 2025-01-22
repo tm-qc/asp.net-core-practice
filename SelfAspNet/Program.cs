@@ -32,6 +32,25 @@ builder.Services.AddTransient<
 
 WebApplication app = builder.Build();
 
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 // SampleSeed.csでデータを投入するために追加
 // DIコンテナ(機能させるためのクラス)の注入準備でscope作成
 using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
@@ -55,23 +74,37 @@ using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
     await SampleSeed.Initialize(provider);
 }
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.Run();
+
+
+// ミドルウェアの推奨順序のメモ
+// インストールした時点でこれは出来てた
+// https://learn.microsoft.com/ja-jp/aspnet/core/fundamentals/middleware/?view=aspnetcore-9.0#middleware-order
+
+// var app = builder.Build();
+
+// // 開発機なら
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseMigrationsEndPoint();//マイグレーション実行
+// }
+// else
+// {
+//     app.UseExceptionHandler("/Error");//エラーページの設定
+//     app.UseHsts();//Strict-Transport-Security応答ヘッダーの設定
+// }
+
+// app.UseHttpsRedirection();//HTTPSリダイレクト設定
+// app.UseStaticFiles();//静的ファイルを提供
+// // app.UseCookiePolicy();//クッキーポリシーの設定
+
+// app.UseRouting();//ルーティング設定
+// // app.UseRateLimiter();//レート(呼び出し制限回数)
+// // app.UseRequestLocalization();//ローカライズの設定
+// // app.UseCors();//CORS(クロスオリジン)要求の設定
+
+// app.UseAuthentication();//認証の設定
+// app.UseAuthorization();//認可の設定
+// // app.UseSession();//セッションの設定
+// // app.UseResponseCompression();//応答の圧縮の設定
+// // app.UseResponseCaching();//応答のキャッシュの設定
