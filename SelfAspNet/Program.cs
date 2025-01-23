@@ -35,7 +35,8 @@ builder.Services.AddTransient<
 // 構成情報を取得する際に型をマッピングするためのクラスを登録し紐づける
 // builder.Services.AddOptionsはbuilder.Services.ConfigureでもOK
 builder.Services.AddOptions<MyAppOptions>().
-Bind(builder.Configuration.GetSection(nameof(MyAppOptions)));
+Bind(builder.Configuration.GetSection(nameof(MyAppOptions))).
+ValidateDataAnnotations();
 
 
 WebApplication app = builder.Build();
