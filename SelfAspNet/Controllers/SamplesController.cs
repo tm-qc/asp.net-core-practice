@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using SelfAspNet.Models;
 using SelfAspNet.Repository;
+// using Microsoft.Extensions.Options;
 
 // ページネーションのプラグイン使うために追加
 using X.PagedList;//型IPagedListを使うため
@@ -15,6 +16,10 @@ using X.PagedList.EF;//メソッドToPagedListAsyncを使うため
 
 // Filterサンプル(MyLogAttributeをつかうため)
 using SelfAspNet.Filters;
+using SelfAspNet.Lib;
+
+// IOptions使うため
+using Microsoft.Extensions.Options;
 
 namespace SelfAspNet.Controllers
 {
@@ -25,16 +30,19 @@ namespace SelfAspNet.Controllers
         private readonly MyContext _context;
         private readonly ISampleRepository _rep;
         private readonly IConfiguration _config;
+        private readonly MyAppOptions _app = null!;//null警告が出た+nullはありえないので!で対処
 
         public SamplesController(
             MyContext context,
             ISampleRepository rep,
-            IConfiguration config
+            IConfiguration config,
+            IOptions<MyAppOptions> app
         )
         {
             _context = context;
             _rep = rep;
             _config = config;
+            _app = app.Value;
         }
 
         // GET: Samples?page=
@@ -112,18 +120,27 @@ namespace SelfAspNet.Controllers
         /// <returns>表示データ</returns>
         public async Task<IActionResult> Index(int page = 1)
         {
+            // 構成情報の取得(今回はSelfAspNet\appsettings.jsonから取得)
+
             // 構成情報の取得サンプル1
             // 一番シンプルだが型指定なし+文字列でしか取得できない
-            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Title"]}");
-            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Projects:0"]}");
-            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Published"]}");
+            Console.WriteLine($"構成情報取得1：{_config["MyAppOptions:Title"]}");
+            Console.WriteLine($"構成情報取得1：{_config["MyAppOptions:Projects:0"]}");
+            Console.WriteLine($"構成情報取得1：{_config["MyAppOptions:Published"]}");
 
             // 構成情報の取得サンプル2
             // シンプルだが型指定あり+文字列でしか取得できない
             // ※サンプルに日付追加
             // ※またここでも単一の値しかとれず、コレクションみたいな複数の値は参照できない
-            Console.WriteLine($"構成情報取得：{_config.GetValue<string>("MyAppOptions:Title")}");
-            Console.WriteLine($"構成情報取得：{_config.GetValue<DateTime>("MyAppOptions:Published")}");
+            Console.WriteLine($"構成情報取得2：{_config.GetValue<string>("MyAppOptions:Title")}");
+            Console.WriteLine($"構成情報取得2：{_config.GetValue<DateTime>("MyAppOptions:Published")}");
+
+            // 【推奨】構成情報の取得サンプル3
+            // 構成情報と型を紐づける形。最初手間かかるけど、使う場合はこれが無難そう
+            // 単一の値しかとれず、コレクションみたいな複数の値は参照できないが、取得時に型指定意識しなくていい
+            Console.WriteLine($"構成情報取得3：{_app.Title}");
+            Console.WriteLine($"構成情報取得3：{_app.Published}");
+            Console.WriteLine($"構成情報取得3：{_app.Projects[0]}");
 
             // 元のコード
             // int pageSize = 3;

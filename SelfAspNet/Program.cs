@@ -3,6 +3,7 @@ using SelfAspNet.Filters;
 using SelfAspNet.Models;
 using SelfAspNet.Repository;
 using SelfAspNet.Middleware;
+using SelfAspNet.Lib;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,12 @@ builder.Services.AddTransient<
 // IServiceCollection AddSampleRepositoryがある場合
 // 以下のように短く書けるらしい
 // builder.Services.AddSampleRepository();
+
+
+// 構成情報を取得する際に型をマッピングするためのクラスを登録し紐づける
+// builder.Services.AddOptionsはbuilder.Services.ConfigureでもOK
+builder.Services.AddOptions<MyAppOptions>().
+Bind(builder.Configuration.GetSection(nameof(MyAppOptions)));
 
 
 WebApplication app = builder.Build();
