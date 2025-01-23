@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c463a85b-d57a-4fb3-bf70-d7f5e717aeec</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup><!-- ファイル追加したときに自動で追記されるっぽいのコメントアウト -->
