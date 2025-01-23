@@ -24,11 +24,17 @@ namespace SelfAspNet.Controllers
     {
         private readonly MyContext _context;
         private readonly ISampleRepository _rep;
+        private readonly IConfiguration _config;
 
-        public SamplesController(MyContext context,ISampleRepository rep)
+        public SamplesController(
+            MyContext context,
+            ISampleRepository rep,
+            IConfiguration config
+        )
         {
             _context = context;
             _rep = rep;
+            _config = config;
         }
 
         // GET: Samples?page=
@@ -106,6 +112,11 @@ namespace SelfAspNet.Controllers
         /// <returns>表示データ</returns>
         public async Task<IActionResult> Index(int page = 1)
         {
+            // 構成情報の取得サンプル1
+            // 一番シンプルだが型指定なし+文字列でしか取得できない
+            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Title"]}");
+            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Projects:0"]}");
+
             // 元のコード
             // int pageSize = 3;
             // IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
