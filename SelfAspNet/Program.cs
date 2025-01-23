@@ -38,6 +38,24 @@ builder.Services.AddOptions<MyAppOptions>().
 Bind(builder.Configuration.GetSection(nameof(MyAppOptions))).
 ValidateDataAnnotations();
 
+// アプリから環境変数を追加する場合
+// 
+// なぜDictionary?
+// DictionaryもListと同じコレクション
+// 
+// Dictionary：順不同のLaravelでいう連想配列
+// List：順番のLaravelでいう配列
+// 
+// ちなみにnew Dictionary<string, string?>補足
+// stringはキーの型
+// string?：値の型でnull許容
+builder.Configuration.AddInMemoryCollection(
+    new Dictionary<string,string?>{
+        ["Company"] = "会社名",
+        ["Since"] = "2025-01-23",
+    }
+);
+
 
 WebApplication app = builder.Build();
 
