@@ -116,6 +116,14 @@ namespace SelfAspNet.Controllers
             // 一番シンプルだが型指定なし+文字列でしか取得できない
             Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Title"]}");
             Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Projects:0"]}");
+            Console.WriteLine($"構成情報取得：{_config["MyAppOptions:Published"]}");
+
+            // 構成情報の取得サンプル2
+            // シンプルだが型指定あり+文字列でしか取得できない
+            // ※サンプルに日付追加
+            // ※またここでも単一の値しかとれず、コレクションみたいな複数の値は参照できない
+            Console.WriteLine($"構成情報取得：{_config.GetValue<string>("MyAppOptions:Title")}");
+            Console.WriteLine($"構成情報取得：{_config.GetValue<DateTime>("MyAppOptions:Published")}");
 
             // 元のコード
             // int pageSize = 3;
