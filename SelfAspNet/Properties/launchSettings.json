@@ -34,12 +34,5 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
-  },
-  "envVariables":{
-    "MEMO1":"見えていい環境変数を各場合の一例。xmlファイルを作成して記載もできるが、Program.csで設定が必要になる。",
-    "ASPNETCORE_ENVIRONMENT":"Development",
-    "MEMO2":"ASPNETCORE_ENVIRONMENTはコントローラーで取得するときは接頭辞「ASPNETCORE_」を除いたENVIRONMENTで参照する。_は接頭辞",
-    "OpenWeather__ApiKey":"dsadsadsadsadsadsa",
-    "MEMO3":"__は改装を表す。コントローラーで取得するときは「OpenWeather:ApiKey」こうなる",
   }
 }
