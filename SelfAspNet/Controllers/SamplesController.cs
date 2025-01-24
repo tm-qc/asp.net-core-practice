@@ -31,18 +31,28 @@ namespace SelfAspNet.Controllers
         private readonly ISampleRepository _rep;
         private readonly IConfiguration _config;
         private readonly MyAppOptions _app = null!;//null警告が出た+nullはありえないので!で対処
+        private readonly ILogger _logger;
+        
+        // ログで何の処理か判別するための任意の処理ID
+        public const int IndexView = 1001;
 
         public SamplesController(
             MyContext context,
             ISampleRepository rep,
             IConfiguration config,
-            IOptions<MyAppOptions> app
+            IOptions<MyAppOptions> app,
+            //<SamplesController>はログのカテゴリ名となる。クラス名をつけるのが一般的
+            ILogger<SamplesController> logger
+            //任意のログのカテゴリ名の設定をするときはfactoryとCreateLoggerを使う必要があり
+            // ILoggerFactory factory 
         )
         {
             _context = context;
             _rep = rep;
             _config = config;
             _app = app.Value;
+            _logger = logger;
+            // _logger = factory.CreateLogger("任意のログのカテゴリ名");
         }
 
         // GET: Samples?page=
@@ -120,6 +130,24 @@ namespace SelfAspNet.Controllers
         /// <returns>表示データ</returns>
         public async Task<IActionResult> Index(int page = 1)
         {
+            // ロギングサンプル
+            // 
+            // ログはクラス単位でコンストラクタでILoggerを読込使うのが基本
+            _logger.LogTrace("トレース：詳細な診断情報（通常は開発時のみ使用）");
+            _logger.LogDebug("デバッグ：デバッグ情報");
+            _logger.LogInformation("通常の動作情報");
+            _logger.LogWarning("警告：エラーではないが、潜在的な問題で対応したほうが無難");
+
+            // 第一引数：処理を識別するために任意で設定できるID IndexView
+            // 第二引数：任意のメッセージを引数で指定するサンプル
+            // 第三引数以降：記載順で任意のプレイスホルダーに適用される
+            _logger.LogError(IndexView,"エラー：{Path}→{Current:yyyy年MM月dd日}",Request.Path,DateTime.Now);
+
+            _logger.LogCritical("致命的な問題");
+            // これは全体のログレベルの設定ではなく、個々に単発で設定できる書き方
+            // _logger.Log(LogLevel.Critical, "致命的な問題");
+            
+
             // 構成情報の取得(今回はSelfAspNet\appsettings.jsonから取得)
 
             // 構成情報の取得サンプル1
