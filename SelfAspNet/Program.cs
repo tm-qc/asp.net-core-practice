@@ -65,6 +65,19 @@ builder.Logging.AddFile(
     Path.Combine(builder.Environment.ContentRootPath, "Logs"));
 
 
+// Swaggerで必要なサービスを登録
+
+// コントローラーを使えるようにする設定
+// APIのルーティング（コントローラーのエンドポイント）が有効になります
+builder.Services.AddControllers();
+// エンドポイントのメタデータ（HTTPメソッド、ルート情報）を探索可能にする設定
+// Swagger がルート情報を収集するために必要です
+builder.Services.AddEndpointsApiExplorer();
+// Swagger の生成を有効にする設定
+// Swagger UI や JSON ドキュメントを生成するために必要です
+builder.Services.AddSwaggerGen();
+
+
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -150,6 +163,27 @@ if (app.Environment.IsDevelopment())
         });  
     }
 }
+
+// Swaggerの有効化
+// ルーティングリストがないようなので以下のコマンドでインストールした
+// dotnet add package Swashbuckle.AspNetCore
+// 
+// 【結果】
+// APIの仕様を確認するための Swagger だった・・
+// 通常のWEBアプリケーションの場合はProgram.csに手動でルーティングリスト出力するためのコードを書く必要がある・・。
+// 
+// URL
+// http://localhost:5103/swagger
+// 
+// Swagger の JSON ドキュメントを提供するミドルウェア
+// 開発者が API の仕様を確認できるようになります
+app.UseSwagger();
+// Swagger UI を有効にするミドルウェア
+// ブラウザで Swagger ドキュメントを視覚的に確認できるインターフェイスを提供します
+app.UseSwaggerUI();
+// コントローラーのルーティングを有効化
+// コントローラーに定義したエンドポイントをアプリに登録します
+app.MapControllers();
 
 app.Run();
 

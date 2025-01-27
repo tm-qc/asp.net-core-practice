@@ -45,6 +45,7 @@
         -->
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     <!-- Nugetのページネイション用ライブラリ：コントローラーでのデータ操作用 -->
     <PackageReference Include="X.PagedList.EF" Version="10.5.7" />
     <!-- Nugetのページネイション用ライブラリ：ビュー用 -->
