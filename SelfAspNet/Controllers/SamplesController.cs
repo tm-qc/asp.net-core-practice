@@ -453,6 +453,51 @@ namespace SelfAspNet.Controllers
             }
         }
 
+
+        /// <summary>
+        /// クッキーサンプル
+        /// ビュー
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Cookie()
+        {
+            ViewBag.cookieVal = Request.Cookies["cookieVal"];
+            return View();
+        }
+
+        /// <summary>
+        /// クッキーサンプル
+        /// クッキーの値を設定する
+        /// </summary>
+        /// <param name="cookieVal"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult Cookie(string cookieVal = "初期値リクエストのクッキーなし")
+        {
+            HttpContext.Response.Cookies.Append("cookieVal", cookieVal,
+                new CookieOptions
+                {
+                    //有効期限。指定なくてもブラウザを閉じると消える
+                    // ブラウザ閉じた後も残す場合はExpiresかMaxAgeを指定する(双方ある場合はMAXAgeが優先)
+                    Expires = DateTime.Now.AddMinutes(5),
+                    // HTTPクッキー
+                    // ブラウザの JavaScript（document.cookie）でこのクッキーの値を取得することができなくなる。
+                    // XSS 攻撃によるクッキーの窃取を防ぐために重要。
+                    // ただし、サーバーサイドでこのクッキーにアクセスすることは可能
+                    HttpOnly = true,
+                    // クロスサイトリクエスト（CSRF 攻撃）を防ぐための設定
+                    // Strict: 同一サイト内のリクエストのみクッキーを送信。
+                    // Lax: 異なるサイトのリクエストではGETでのみクッキーを送信(既定)
+                    // None: 全てのクロスサイトリクエストでクッキーを送信(Secure = trueと組み合あわせないと使えない)
+                    // SameSite = SameSiteMode.None,
+                    // HTTPS 接続時のみクッキーが送信されるように設定。これもセキュリティを強化するために重要
+                    // Secure = true,
+                }
+            );
+            return RedirectToAction(nameof(Cookie));
+        }
+
+
         private bool SampleExists(int Id)
         {
             return _context.Samples.Any(e => e.Id == Id);
