@@ -10,6 +10,9 @@
   <ItemGroup><!-- ファイル追加したときに自動で追記されるっぽいのコメントアウト -->
   <!-- Seed.sqlはビルドエラーになるので除外しないといけない -->
     <!-- <Compile Include="Seed.sql" /> -->
+
+    <!-- フォルダ作成で勝手にできた -->
+    <Folder Include="Logs\" />
   
     <Folder Include="wwwroot\images\" />
   </ItemGroup>

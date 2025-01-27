@@ -4,6 +4,7 @@ using SelfAspNet.Models;
 using SelfAspNet.Repository;
 using SelfAspNet.Middleware;
 using SelfAspNet.Lib;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +57,13 @@ builder.Configuration.AddInMemoryCollection(
     }
 );
 
+// ロギングファイル出力のためのプロバイダーを登録
+builder.Logging.ClearProviders();
+builder.Logging.AddFile(
+    // プロジェクト配下のLogsフォルダにログを記録する
+    // 事前にLogsフォルダを作成しておかないと起動時にエラーになる
+    Path.Combine(builder.Environment.ContentRootPath, "Logs"));
+
 
 WebApplication app = builder.Build();
 
@@ -104,6 +112,40 @@ using (AsyncServiceScope scope = app.Services.CreateAsyncScope())
 // ミドルウェア登録基本
 // app.UseMiddleware<HeadersInfoMiddleware>();
 app.UseHeadersInfo();
+
+// ログをファイルに出力した場合、これがないとdotnet watchで自動でブラウザが起動しない
+// アプリの起動はしてるので、ファイルログをみて自分でブラウザを開く必要がある
+// 開発機でのみ明示的にブラウザを開く
+if (app.Environment.IsDevelopment())
+{
+    // IConfigurationで設定ファイルの情報を取得
+    IConfiguration configuration = app.Services.GetRequiredService<IConfiguration>();
+    // SelfAspNet\Properties\launchSettings.jsonのapplicationUrlで指定しているURLを取得
+    string? applicationUrl = configuration["ASPNETCORE_URLS"];
+
+    // applicationUrlが取得できなかった場合の処理。基本ないと思うが、本当はエラーで止めるのが良いとは思う
+    if (string.IsNullOrEmpty(applicationUrl)){
+        Console.WriteLine("Warning : applicationUrlが取得できませんでした。Logsフォルダーのログ Now listening のURLを確認して手動でアクセスしてください");
+    }else{
+        // アプリケーションが起動したタイミングで実行する処理を登録
+        app.Lifetime.ApplicationStarted.Register(() =>
+        {
+            try
+            {
+                // ブラウザを開くプロセスを起動
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = applicationUrl,
+                    UseShellExecute = true // OSのデフォルトブラウザで開く
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to launch browser: {ex.Message}");
+            }
+        });  
+    }
+}
 
 app.Run();
 
