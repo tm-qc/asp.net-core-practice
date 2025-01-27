@@ -69,13 +69,13 @@ builder.Logging.AddFile(
 
 // コントローラーを使えるようにする設定
 // APIのルーティング（コントローラーのエンドポイント）が有効になります
-builder.Services.AddControllers();
+// builder.Services.AddControllers();
 // エンドポイントのメタデータ（HTTPメソッド、ルート情報）を探索可能にする設定
 // Swagger がルート情報を収集するために必要です
-builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddEndpointsApiExplorer();
 // Swagger の生成を有効にする設定
 // Swagger UI や JSON ドキュメントを生成するために必要です
-builder.Services.AddSwaggerGen();
+// builder.Services.AddSwaggerGen();
 
 
 WebApplication app = builder.Build();
@@ -177,13 +177,13 @@ if (app.Environment.IsDevelopment())
 // 
 // Swagger の JSON ドキュメントを提供するミドルウェア
 // 開発者が API の仕様を確認できるようになります
-app.UseSwagger();
+// app.UseSwagger();
 // Swagger UI を有効にするミドルウェア
 // ブラウザで Swagger ドキュメントを視覚的に確認できるインターフェイスを提供します
-app.UseSwaggerUI();
+// app.UseSwaggerUI();
 // コントローラーのルーティングを有効化
 // コントローラーに定義したエンドポイントをアプリに登録します
-app.MapControllers();
+// app.MapControllers();
 
 app.Run();
 
