@@ -84,7 +84,11 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    // 試しにデフォルトで表示される物を変更
+    // http://localhost:5103/ で内容は http://localhost:5103/Samples/Index が表示されるようになる
+
+    // pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Samples}/{action=Index}/{page:int?}");
 
 // SampleSeed.csでデータを投入するために追加
 // DIコンテナ(機能させるためのクラス)の注入準備でscope作成
