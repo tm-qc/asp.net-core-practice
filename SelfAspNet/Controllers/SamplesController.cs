@@ -21,6 +21,9 @@ using SelfAspNet.Lib;
 // IOptions使うため
 using Microsoft.Extensions.Options;
 
+using SelfAspNet.Extensions;
+using SelfAspNet.Record;
+
 namespace SelfAspNet.Controllers
 {
     // コントローラー単位でフィルター適用の場合
@@ -520,6 +523,32 @@ namespace SelfAspNet.Controllers
             // フォームから送られた値をセッションの値に保存
             HttpContext.Session.SetString("sessionVal", sessionVal);
             return RedirectToAction(nameof(Session));
+        }
+
+
+        /// <summary>
+        /// セッションをシリアライズするサンプル
+        /// samples/Jsonにアクセスすると、セッションにPersonオブジェクトをシリアライズし保存して、その値を復元し取得して表示する
+        /// 
+        /// 分散キャッシュを使う場合に、セッションオブジェクトを保存する場合は、そのオブジェクトをシリアライズして保存する必要がある
+        /// ※Redis、Memcachedは保存先を分散する分散キャッシュというのが本番環境で使われることがある
+        /// ※現状は分散キャッシュをつかっていないので、シリアライズはしなくてもセッションオブジェクトに保存できる
+        ///   (今はInMemoryのbuilder.Services.AddDistributedMemoryCache()をつかってるので、そのまま保存できる)
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Json()
+        {
+            var session = HttpContext.Session;
+            // usrというキーでセッションにPersonオブジェクトがない場合
+            if (session.Get<Person>("usr") == null)
+            {
+                // Personオブジェクトで指定してるNameとAgeの値をセッションに保存
+                // usrというキーでセッションにPersonオブジェクトを保存
+                session.Set("usr", new Person("Personオブジェクトで指定してるNameです", 18));
+            }
+            var usr = session.Get<Person>("usr");
+            // Viewに文字で表示
+            return Content($"デシリアライズ(復元)された値 => {usr?.Name}：{usr?.Age}歳");
         }
 
 
