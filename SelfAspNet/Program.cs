@@ -77,6 +77,51 @@ builder.Logging.AddFile(
 // Swagger UI や JSON ドキュメントを生成するために必要です
 // builder.Services.AddSwaggerGen();
 
+// セッションを有効にする
+
+// キャッシュについて
+// 
+// ・ASP.NET COREはキャッシュがデフォで動いていないとのこと(証拠ないけど・・)、AddDistributedMemoryCacheやIMemoryCacheを定義し、メモリ保存で実装。一番シンプルで簡単。
+// ・キャッシュ保存先がメモリだったらアプリ再起動で消える
+// ・大規模、キャッシュが消えてはいけないツールの場合の本番環境では、Redis、Memcachedなどを利用した分散キャッシュの実装を使用するのが一般的
+// ・AddDistributedMemoryCacheやIMemoryCacheは分散キャッシュではなく使用領域をメモリで指定してキャッシュをONにする意味
+// ・Redis、Memcachedは保存先を本当に分散できる分散キャッシュ。高負荷、大規模、キャッシュを消してはいけないツールの場合に使用する
+// ・LaravelはデフォでCacheフォルダにキャッシュがファイル形式で保存されてるが、本番環境ではRedisやMemcachedを使うのが一般的
+
+// キャッシュサービスで保存先としてメモリを使う
+// 
+// ※本や公式ではセッション有効化時にキャッシュを定義してたがなくても動いた
+// 　正確にはなぜ必要かわからないが、エコのためかな？
+// https://learn.microsoft.com/ja-jp/aspnet/core/fundamentals/app-state?view=aspnetcore-9.0#cache
+builder.Services.AddDistributedMemoryCache();
+// セッションサービスを登録
+builder.Services.AddSession(
+    // セッションの設定
+    options =>
+    {
+        // セッションのタイムアウト時間を設定
+        options.IdleTimeout = TimeSpan.FromMinutes(30);
+        // セッションのクッキーのHTTPOnly属性を設定
+        options.Cookie.HttpOnly = true;
+        // セッションのクッキーのEssential属性を設定
+        // EU系の法律で必須属性になる
+        // アプリがセッション情報を管理するためにクッキーを使用する場合、そのクッキーを必須として設定することで、
+        // プライバシー同意がなくても利用可能にするため
+        options.Cookie.IsEssential = true;        // セッションのクッキー名を設定
+
+        // options.Cookie.Name = ".MyApp.Session";
+        // // セッションのクッキーの有効期限を設定
+        // options.Cookie.MaxAge = TimeSpan.FromDays(1);
+        // // セッションのクッキーの有効なドメインを設定
+        // options.Cookie.Domain = "localhost";
+        // // セッションのクッキーの有効なパスを設定
+        // options.Cookie.Path = "/";
+        // // セッションのクッキーのセキュア属性を設定
+        // options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
+        // // セッションのクッキーのSameSite属性を設定
+        // options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
+    }
+);
 
 WebApplication app = builder.Build();
 
@@ -94,6 +139,14 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// セッションを有効にする
+// 
+// 記載する順番に注意
+// ・app.UseRouting();の後
+// ・MapDefaultControllerRouteの前
+// ・MapRazorPagesの前
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

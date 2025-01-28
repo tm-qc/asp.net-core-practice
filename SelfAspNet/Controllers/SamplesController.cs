@@ -497,6 +497,31 @@ namespace SelfAspNet.Controllers
             return RedirectToAction(nameof(Cookie));
         }
 
+        /// <summary>
+        /// セッションサンプルのビュー
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Session()
+        {
+            // セッションの値をビューに渡す
+            ViewBag.sessionVal = HttpContext.Session.GetString("sessionVal");
+            return View();
+        }
+
+
+        /// <summary>
+        /// セッションサンプル
+        /// </summary>
+        /// <param name="sessionVal"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult Session(string sessionVal = "初期値リクエストのセッション値なし")
+        {
+            // フォームから送られた値をセッションの値に保存
+            HttpContext.Session.SetString("sessionVal", sessionVal);
+            return RedirectToAction(nameof(Session));
+        }
+
 
         private bool SampleExists(int Id)
         {
