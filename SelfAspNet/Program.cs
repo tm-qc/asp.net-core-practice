@@ -128,11 +128,25 @@ builder.Services.AddSession(
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
+// 開発機じゃない場合はエラーページを設定
+// 環境変数 ASPNETCORE_ENVIRONMENT が Development 以外の場合はエラーページを設定
+// 開発機は ASPNETCORE_ENVIRONMENT が Development だったらエラーページが開発用に表示されるようにデフォでなってるので設定不要
 if (!app.Environment.IsDevelopment())
 {
+    // ここで本番機の場合のエラーページを設定している
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // Web サイトへのアクセスを常に HTTPS に強制するセキュリティ機能
     app.UseHsts();
+}
+
+// ちなみに
+// 開発環境では app.UseDeveloperExceptionPage() により 詳細なエラー情報 が表示できる機能もある（エラー時に画面が真っ白になるのを防げる）
+if (app.Environment.IsDevelopment())
+{
+    // ここで開発機の場合のエラーページで詳細を出すように設定もできる
+    // エラー特定できないときに使ってみるといいかも
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
