@@ -179,6 +179,7 @@ namespace SelfAspNet.Controllers
             // return View(samplesNugetList);
             
             ViewBag.CreateResult = TempData["CreateResult"];
+            ViewBag.HttpContextItems = HttpContext.Items["httpContextCurrent"];
             // リポジトリから処理を呼び出してるコード
             return View(await _rep.GetAllPagerAsync(page));
         }
