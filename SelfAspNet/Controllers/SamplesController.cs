@@ -23,6 +23,8 @@ using Microsoft.Extensions.Options;
 
 using SelfAspNet.Extensions;
 using SelfAspNet.Record;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace SelfAspNet.Controllers
 {
@@ -554,6 +556,39 @@ namespace SelfAspNet.Controllers
             return Content($"デシリアライズ(復元)された値 => {usr?.Name}：{usr?.Age}歳");
         }
 
+        /// <summary>
+        /// ファイルが見つからないエラーの例外取得サンプル
+        /// （リクエスト時のクッキー参照もお試しでやってみた)
+        /// 
+        /// http://localhost:5103/samples/NotFoundError
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult NotFoundError()
+        {
+            // リクエスト時のクッキー情報取得サンプル
+            IRequestCookiesFeature? reqCookie = HttpContext.Features.Get<IRequestCookiesFeature>();
+            if (reqCookie != null)
+            {
+                foreach (var cookie in reqCookie.Cookies)
+                {
+                    Console.WriteLine($"🍪 クッキー名: {cookie.Key}, 値: {cookie.Value}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("🍪 クッキー情報が取得できませんでした。");
+            }
+
+            // エラーの例外取得サンプル
+            IExceptionHandlerFeature? expFeature = HttpContext.Features.Get<IExceptionHandlerFeature>();
+            // ?.：expFeature が null の場合に Error プロパティへのアクセスをスキップし、null を返す
+            if(expFeature?.Error is FileNotFoundException)
+            {
+                return Content("ファイルがありません。FileNotFoundExceptionが発生しました");
+
+            }
+            return View();
+        }
 
         private bool SampleExists(int Id)
         {
