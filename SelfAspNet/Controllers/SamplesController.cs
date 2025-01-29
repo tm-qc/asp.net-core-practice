@@ -590,6 +590,22 @@ namespace SelfAspNet.Controllers
             return View();
         }
 
+        // エラーページのサンプル
+        // なぜかわからないが、ルート指定しないとid(HTTPステータス)が受け取れない
+        [Route("Samples/Error/{id:int}")]
+        public IActionResult Error(int id)
+        {
+            Console.WriteLine($"😲エラーHTTPステータスコード：{id}");
+            // 404エラーの場合の表示
+            if (id == 404)
+            {
+                return Content($"{id}：ページを正しく表示できません...");
+            }
+            // その他のエラーの場合
+            return Content($"{id}：ページを正しく表示できません...");
+        }
+
+
         private bool SampleExists(int Id)
         {
             return _context.Samples.Any(e => e.Id == Id);

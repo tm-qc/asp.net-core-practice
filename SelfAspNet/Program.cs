@@ -149,6 +149,15 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+// URLを/Samples/Error/{0}にしたうえでエラーページを表示する
+// 例）/Samples/存在しないURL → /Samples/Error/404
+app.UseStatusCodePagesWithRedirects("/Samples/Error/{0}");
+
+// URLが変わらずにエラーページを表示する
+// 例）/Samples/存在しないURL → /Samples/存在しないURLでエラーを表示
+// 個人的にこっちの方が良さそう(ユーザに与える情報が少ない)
+// app.UseStatusCodePagesWithReExecute("/Samples/Error/{0}");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
