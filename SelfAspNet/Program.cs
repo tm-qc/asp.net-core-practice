@@ -12,7 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 // アプリ全体にフィルターを適用する場合はここに設定(設定後はアプリ再起動が必要)
 builder.Services.AddControllersWithViews(
     // options => options.Filters.Add<MyLogAttribute>()
-);
+)
+// TempDataをセッションで使うための設定(Cookieなら不要で何も書かなくても使える)
+.AddSessionStateTempDataProvider();
 
 // モデルコンテキストを登録
 builder.Services.AddDbContext<MyContext>(options =>

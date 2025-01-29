@@ -177,7 +177,8 @@ namespace SelfAspNet.Controllers
             // int pageSize = 3;
             // IPagedList<Sample> samplesNugetList = await _context.Samples.OrderBy(s => s.Id).ToPagedListAsync(page, pageSize);
             // return View(samplesNugetList);
-
+            
+            ViewBag.CreateResult = TempData["CreateResult"];
             // リポジトリから処理を呼び出してるコード
             return View(await _rep.GetAllPagerAsync(page));
         }
@@ -291,6 +292,7 @@ namespace SelfAspNet.Controllers
             if (ModelState.IsValid)
             {
                 await _rep.CreateAsync(sample);
+                TempData["CreateResult"] = $"「{sample.Title}」を新規登録しました";
                 return RedirectToAction(nameof(Index));//保存後にリダイレクトして、サーバー側でIndexメソッドを実行
             }
             // バリデーション失敗の時はsample/createを表示
