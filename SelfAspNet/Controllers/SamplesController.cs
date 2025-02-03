@@ -25,6 +25,7 @@ using SelfAspNet.Extensions;
 using SelfAspNet.Record;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Localization;
 
 namespace SelfAspNet.Controllers
 {
@@ -37,6 +38,7 @@ namespace SelfAspNet.Controllers
         private readonly IConfiguration _config;
         private readonly MyAppOptions _app = null!;//null警告が出た+nullはありえないので!で対処
         private readonly ILogger _logger;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
         
         // ログで何の処理か判別するための任意の処理ID
         public const int IndexView = 1001;
@@ -47,9 +49,11 @@ namespace SelfAspNet.Controllers
             IConfiguration config,
             IOptions<MyAppOptions> app,
             //<SamplesController>はログのカテゴリ名となる。クラス名をつけるのが一般的
-            ILogger<SamplesController> logger
+            ILogger<SamplesController> logger,
             //任意のログのカテゴリ名の設定をするときはfactoryとCreateLoggerを使う必要があり
             // ILoggerFactory factory 
+            // 国際化グローバル設定(IHtmlLocalizerでも同じ)
+            IStringLocalizer<SharedResource> sharedLocalizer
         )
         {
             _context = context;
@@ -58,6 +62,7 @@ namespace SelfAspNet.Controllers
             _app = app.Value;
             _logger = logger;
             // _logger = factory.CreateLogger("任意のログのカテゴリ名");
+            _sharedLocalizer = sharedLocalizer;
         }
 
         // GET: Samples?page=
@@ -182,6 +187,8 @@ namespace SelfAspNet.Controllers
             
             ViewBag.CreateResult = TempData["CreateResult"];
             ViewBag.HttpContextItems = HttpContext.Items["httpContextCurrent"];
+            // 国際化対応のグローバル設定のメッセージをViewBagに渡すサンプル
+            ViewBag.global = _sharedLocalizer["global"];
             // リポジトリから処理を呼び出してるコード
             return View(await _rep.GetAllPagerAsync(page));
         }

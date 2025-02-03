@@ -6,10 +6,17 @@
 
 <h1>Create</h1>
 
+<p>
+    国際化対応のサンプル<br>
+    (グローバル設定)<br>
+
+    テンプレート：@SharedLocalizer["global"]<br>
+    @* コントローラーのCreateアクションでViewBagに渡してないから空のはず *@
+    ビューバッグから：@ViewBag.global<br>
+</p>
+
 <h4>Sample</h4>
-    FileType：@Localizer["FileType"]<br>
-    @Localizer["Hello"]<br>
-    @Localizer["Current", DateTime.Now.ToShortDateString()]<br>
+
 <hr />
 <div class="row">
     <div class="col-md-4">

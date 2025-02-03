@@ -9,6 +9,7 @@
 <h1>Index</h1>
 <p>
     国際化対応のサンプル<br>
+    (コントローラー、アクション(ビュー)指定の設定)<br>
 
     FileType：@Localizer["FileType"]<br>
     @Localizer["Hello"]<br>
@@ -25,6 +26,15 @@
     @* 2. クッキー：クッキーの c=ja|ci=ja(c=ja or ci=jaの意味)があればそこを参照する*@
 
     @* 3. リクエストヘッダー：Accept-Langageがある場合。あまり使うことない。ブラウザからの設定っぽい *@
+</p>
+
+<p>
+    国際化対応のサンプル<br>
+    (グローバル設定)<br>
+
+    テンプレート：@SharedLocalizer["global"]<br>
+    ビューバッグから：@ViewBag.global<br>
+</p>
 
 <p>
     @ViewBag.CreateResult
