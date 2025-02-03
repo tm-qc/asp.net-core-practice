@@ -159,6 +159,9 @@ app.UseStatusCodePagesWithRedirects("/Samples/Error/{0}");
 // app.UseStatusCodePagesWithReExecute("/Samples/Error/{0}");
 
 app.UseHttpsRedirection();
+
+// このメソッドでプロジェクト直下のwwwrootフォルダを静的ファイルのルートディレクトリとして認識される
+// localの例) wwwroot\css\sample.cssにhttp://localhost:5103/css/sample.cssでアクセスできる
 app.UseStaticFiles();
 
 app.UseRouting();
