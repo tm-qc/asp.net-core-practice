@@ -162,6 +162,13 @@ app.UseHttpsRedirection();
 
 // このメソッドでプロジェクト直下のwwwrootフォルダを静的ファイルのルートディレクトリとして認識される
 // localの例) wwwroot\css\sample.cssにhttp://localhost:5103/css/sample.cssでアクセスできる
+// 
+// 補足
+// 既定のファイル：URLでファイル名を省略した場合(フォルダ名だけでアクセス)に表示されるファイル
+// 　　　　　　　　既定ではindex.html、index.htm、default.html、default.htmの順で検索される
+// フォルダ参照：フォルダ名だけでアクセスした場合に、表示するファイルがない場合にフォルダ内のファイル一覧が表示される。既定はfalseで表示されない
+// 
+// この設定もUseFileServer()(UseStaticFilesの機能も備えてる)で細かく触れるが、基本的にはデフォルトで問題ないのでさわらなくていい
 app.UseStaticFiles();
 
 // 静的リソースUseStaticFilesの応用
