@@ -164,6 +164,17 @@ app.UseHttpsRedirection();
 // localの例) wwwroot\css\sample.cssにhttp://localhost:5103/css/sample.cssでアクセスできる
 app.UseStaticFiles();
 
+// 静的リソースUseStaticFilesの応用
+// 静的リソースをおくフォルダを追加する
+// 
+// 例えば、MyStorageフォルダをPJ直下作成し静的リソースを置いて、http://localhost:5103/storage/sample.jpgでアクセスできるようにする
+// app.UseStaticFiles(new StaticFileOptions
+// {
+//     FileProvider = new PhysicalFileProvider(
+//     Path.Combine(builder.Environment.ContentRootPath, "MyStorage")),
+//     RequestPath = "/storage",
+// });
+
 app.UseRouting();
 
 app.UseAuthorization();
