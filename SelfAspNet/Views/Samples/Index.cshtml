@@ -8,6 +8,25 @@
 
 <h1>Index</h1>
 <p>
+    国際化対応のサンプル<br>
+
+    FileType：@Localizer["FileType"]<br>
+    @Localizer["Hello"]<br>
+    @Localizer["Current", DateTime.Now.ToShortDateString()]<br>
+
+    @* 国際化メモ *@
+    
+    @* 設定優先度 *@
+
+    @* 1.クエリ情報：ゲットパラムのculture or ui-cultureから取得 *@
+    @* 一般的にcultureだけつかい、ui-cultureも同じ設定で取得し使う *@
+    @* http://localhost:5103/?culture=en *@
+
+    @* 2. クッキー：クッキーの c=ja|ci=ja(c=ja or ci=jaの意味)があればそこを参照する*@
+
+    @* 3. リクエストヘッダー：Accept-Langageがある場合。あまり使うことない。ブラウザからの設定っぽい *@
+
+<p>
     @ViewBag.CreateResult
 </p>
 <p>

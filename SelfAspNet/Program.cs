@@ -5,6 +5,7 @@ using SelfAspNet.Repository;
 using SelfAspNet.Middleware;
 using SelfAspNet.Lib;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,12 @@ builder.Services.AddControllersWithViews(
     // options => options.Filters.Add<MyLogAttribute>()
 )
 // TempDataをセッションで使うための設定(Cookieなら不要で何も書かなくても使える)
-.AddSessionStateTempDataProvider();
+.AddSessionStateTempDataProvider()
+// 国際化対応の基本設定
+.AddViewLocalization(
+    LanguageViewLocationExpanderFormat.Suffix,
+    options => options.ResourcesPath = "Resources"
+);
 
 // モデルコンテキストを登録
 builder.Services.AddDbContext<MyContext>(options =>
@@ -323,6 +329,22 @@ app.Use(async (context, next) =>
 // コントローラーのルーティングを有効化
 // コントローラーに定義したエンドポイントをアプリに登録します
 // app.MapControllers();
+
+// リクエストに応じて言語を決定する仕組みの設定
+app.UseRequestLocalization( options =>{
+        // アプリで使用するカルチャの一覧
+        var cultures = new[]{"ja","de","en"};
+
+        // デフォルトのカルチャを設定(今回は[0]=ja)
+        options.SetDefaultCulture(cultures[0]);
+        // アプリ内部でサポートするカルチャを設定
+        // ※内部とはWeb アプリケーションの内部処理 (例えば、日付や数値の表示形式、通貨の単位など)
+        options.AddSupportedCultures(cultures);
+        // ユーザーインターフェース (UI)でサポートするカルチャを設定
+        // ※アプリの文字列リソース（例：メニュー、ボタン、エラーメッセージなど）をどの言語で表示するかのために使います
+        options.AddSupportedUICultures(cultures);
+    }
+);
 
 app.Run();
 

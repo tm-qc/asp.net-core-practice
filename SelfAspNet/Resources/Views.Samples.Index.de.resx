@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Hello" xml:space="preserve">
+        <value>Guten Tag!!</value>
+    </data>
+    <data name="Current" xml:space="preserve">
+        <value>&lt;b&gt;Es ist heute {0}.&lt;/b&gt;</value>
+    </data>
+    <data name="FileType" xml:space="preserve">
+        <value>Deutschland</value>
+    </data>
+</root>
