@@ -175,6 +175,22 @@ app.UseStaticFiles();
 //     RequestPath = "/storage",
 // });
 
+// 静的リソースUseStaticFilesの応用
+// プロジェクト直下のwwwrootフォルダに対してキャッシュの設定
+// app.UseStaticFiles(new StaticFileOptions
+// {
+//     OnPrepareResponse = staticContext =>
+//     {
+//         // publicはキャッシュの指定値(Cache-Control のキャッシュ制御ディレクティブ)
+//         // public：各ユーザーのブラウザのキャッシュやCDN やプロキシサーバーのキャッシュに保存できる。主にjs、css、画像など誰が見ていい静的リソースに使う
+//         // private：各ユーザーのブラウザのキャッシュに保存できるが、CDN やプロキシサーバーには保存できない。主にセッション情報などユーザー固有の個人情報に使う
+//         // 
+//         // 60 * 60 * 24 * 3 = 259200 秒、すなわち 3日間 のキャッシュ有効期間
+//         staticContext.Context.Response.Headers.Append(
+//           "Cache-Control", $"public, max-age={60 * 60 * 24 * 3}");
+//     }
+// });
+
 app.UseRouting();
 
 app.UseAuthorization();
