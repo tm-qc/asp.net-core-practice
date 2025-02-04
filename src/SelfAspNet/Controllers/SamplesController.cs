@@ -612,6 +612,18 @@ namespace SelfAspNet.Controllers
             return Content($"{id}：ページを正しく表示できません...");
         }
 
+        // 単体テスト検証用：2つの数値を足すメソッド
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        // 単体テスト検証用：2つの数値を掛け算するメソッド
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
+
 
         private bool SampleExists(int Id)
         {

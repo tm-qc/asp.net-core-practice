@@ -4,8 +4,10 @@
 # **/bin/
 # **/obj/
 
-SelfAspNet/bin/
-SelfAspNet/obj/
-SelfAspNet/Logs/
-CoreIdentity/bin/
-CoreIdentity/obj/
+src/SelfAspNet/bin/
+src/SelfAspNet/obj/
+src/SelfAspNet/Logs/
+src/CoreIdentity/bin/
+src/CoreIdentity/obj/
+tests/SelfAspNet.Tests/obj/
+tests/SelfAspNet.Tests/bin/
