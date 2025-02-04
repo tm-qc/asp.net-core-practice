@@ -1,1 +1,0 @@
-console.log("sample_reserve.jsを読み込みました");//メインが読み込めなかった時のjsファイル

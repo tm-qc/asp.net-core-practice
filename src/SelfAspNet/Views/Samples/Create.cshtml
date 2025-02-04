@@ -1,0 +1,79 @@
+@model SelfAspNet.Models.Sample
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<p>
+    国際化対応のサンプル<br>
+    (グローバル設定)<br>
+
+    テンプレート：@SharedLocalizer["global"]<br>
+    @* コントローラーのCreateアクションでViewBagに渡してないから空のはず *@
+    ビューバッグから：@ViewBag.global<br>
+</p>
+
+<h4>Sample</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @* <form asp-action="Create">について *@
+        @* 結果：<form action="/Samples/Create" method="post" novalidate="novalidate"> *@
+        @* actionについて：コントローラーからSamplesを特定、asp-action="Create"でアクションをcreateに指定 *@
+        @* method：デフォはPost。指定も可能(method="get")*@
+        @* novalidate：フォーム送信時のHTML5によるブラウザ検証を無効化する。使いたいときは色々あるが、手動でformを作成するのがよさそう。詳細は後で *@
+        <form asp-action="Create" novalidate="false">
+
+            @* model全体にかかわるエラーをリストで表示する *@
+
+            @* All:すべてのエラー(model+プロパティ) *@
+            @* ModelOnly:modelレベルのエラーのみ *@
+            @* None:表示しない *@
+
+            @* 基本はModelOnlyでOK。プロパティはすでにメッセージ表示してるので *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @* label asp-forとinput asp-for *@
+                @* これでlabelとinputのforとidを紐づけた形で生成される *@
+                @* inputのtypeもモデルのプロパティの型に応じて最適な type が選択され自動で決まる *@
+                @* inputのtypeを手動で制御したいときはモデルでアノテーションもあるがややこしいので、手書きでform書くのがいいかも *@
+                <label asp-for="Title" class="control-label"></label>
+                @* ちなみにdata-val="false"を設定するとバリデーション無効化できる *@
+                <input asp-for="Title" class="form-control" />
+                @* asp-validation-for:バリデーションエラーメッセージ表示。内部的にはdata-valmsg-forなどが展開される *@
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubTitle" class="control-label"></label>
+                @* value=""：結果空文字じゃなくてnullになるので、value空文字は不要 *@
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@* 個別テンプレートでコンテンツを読み込みたい場合は@section使う *@
+@* 今回は「SelfAspNet\Views\Shared\_ValidationScriptsPartial.cshtml」が読み込まれてる *@
+
+@* バリデーションが簡単に出来るのはjqueryのおかげ *@
+@* ・jquery.min.js:jquery本体でアプリの一番大枠で読み込まれてる *@
+
+@* _ValidationScriptsPartialで以下のjqueryをよみこんでフロントでバリデーションを実行してる *@
+@* ・jquery.validate.min.js:検証機能付与 *@
+@* ・jquery.validate.unobtrusive.min.js:検証機能のパラメータを独自属性data-xxxで管理するためのライブラリ *@
+
+@* ※現代ではjqueryは使わないのがベストではある *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

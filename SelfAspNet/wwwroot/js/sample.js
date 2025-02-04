@@ -1,1 +1,0 @@
-console.log("sample.jsを読み込みました");//メインのjsファイル

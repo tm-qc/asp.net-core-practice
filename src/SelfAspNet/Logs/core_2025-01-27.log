@@ -1,0 +1,2078 @@
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 12:25:05 
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 12:25:05 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:25:05 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:25:05 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:25:05 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:28:12 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 12:28:23 
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 12:31:13 
+Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 12:31:13 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:31:13 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:31:13 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:31:13 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:33:46 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 12:33:54 
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 12:33:54 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:33:54 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:33:54 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 12:33:54 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 12:33:54 
+Failed to determine the https port for redirect.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 14:53:01 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:16 
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 14:53:16 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 14:53:16 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 14:53:16 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 14:53:16 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 14:53:17 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:17 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:17 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:53:17 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:17 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:17 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:17 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:24 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:24 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:53:24 
+エラー：/Samples/Index/2→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:24 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:24 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:24 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:26 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:26 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:53:26 
+エラー：/Samples/Index/1→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:26 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:26 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:26 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:28 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:28 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:53:28 
+エラー：/Samples/Index/2→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:28 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:28 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:28 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:33 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:33 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:53:33 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:53:33 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:33 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:53:33 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:54:40 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:54:40 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 14:54:40 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 14:54:40 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:54:40 
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 14:54:40 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:04 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:04 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:04 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:04 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:05 
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:05 
+Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:11:06 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:21 
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 15:11:21 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:11:21 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:11:21 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:11:21 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 15:11:21 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:21 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:21 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:21 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:21 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:21 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:21 
+Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:25 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:25 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:25 
+エラー：/Samples/Index/2→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:25 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:25 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:25 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:27 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:27 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:27 
+エラー：/Samples/Index/3→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:27 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:27 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:27 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:29 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:29 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:29 
+エラー：/Samples/Index/2→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:29 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:29 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:29 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:30 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:30 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:11:30 
+エラー：/Samples/Index/1→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:11:30 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:30 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:11:30 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:24:06 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:29:58 
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 15:29:58 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:29:58 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:29:58 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:29:58 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 15:29:58 
+Failed to determine the https port for redirect.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 15:29:58 
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException:Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method5(Closure, Object, HttpContext, IServiceProvider)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 15:30:20 
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException:Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method5(Closure, Object, HttpContext, IServiceProvider)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:24 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:33 
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 15:30:33 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:33 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:33 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:33 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 15:30:34 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:34 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:34 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:30:34 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:34 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:34 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:34 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:39 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:39 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:30:39 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:30:39 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:39 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:39 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:41 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:30:51 
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 15:30:51 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:51 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:51 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:30:51 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 15:30:51 
+Failed to determine the https port for redirect.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 15:30:51 
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException:Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method5(Closure, Object, HttpContext, IServiceProvider)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:33:03 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:40:16 
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 15:40:16 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:40:16 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:40:16 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 15:40:16 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 15:40:17 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:17 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:17 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:40:17 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:17 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:40:17 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:40:17 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:21 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:21 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 15:40:21 
+エラー：/samples→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 15:40:21 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:40:21 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 15:40:21 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:20:16 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:20:30 
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:20:30 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:20:30 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:20:30 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:20:30 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:20:30 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:20:30 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:20:30 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:20:30 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:20:30 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:20:30 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:20:30 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:19 
+Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:24:20 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:20 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:20 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:20 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:24:20 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:20 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:20 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:24:20 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:20 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:20 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:20 
+Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:41 
+Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:24:41 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:41 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:41 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:41 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:24:42 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:42 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:42 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:24:42 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:42 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:42 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:42 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:58 
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:24:58 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:58 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:58 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:24:58 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:24:58 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:58 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:58 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:24:58 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:24:59 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:59 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:24:59 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:26:16 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:26:16 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:26:16 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:26:16 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:26:16 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:26:16 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:46 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:46 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:46 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:46 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:46 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:46 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:46 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:47 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:47 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:47 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:47 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:47 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:54 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:54 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:54 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:27:54 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:27:54 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:27:54 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:28:00 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+致命的な問題
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+致命的な問題
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 16:28:00 
+Connection id "0HN9UKEQB6GME", Request id "0HN9UKEQB6GME:00000001": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 16:28:00 
+Connection id "0HN9UKEQB6GMD", Request id "0HN9UKEQB6GMD:00000001": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 16:28:00 
+Connection id "0HN9UKEQB6GMA", Request id "0HN9UKEQB6GMA:00000010": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 16:28:00 
+Connection id "0HN9UKEQB6GME", Request id "0HN9UKEQB6GME:00000002": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:28:00 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:28:00 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:28:00 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:28:00 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:28:00 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:28:00 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:31:50 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:31:50 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:31:50 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:31:50 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:31:50 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:31:50 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:31:50 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:35:37 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:35:37 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:35:37 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:35:37 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:35:37 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:35:37 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:35:37 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:40:09 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:09 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:09 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:40:09 
+An unhandled exception has occurred while executing the request.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(ILogger logger, String message, Object[] args)
+   at SelfAspNet.Controllers.SamplesController.Index(Int32 page)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:40:09 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:09 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:09 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:09 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:25 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:25 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:40:25 
+エラー：/samples→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:25 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:25 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:25 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:40:45 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:40:50 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:50 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:50 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:40:50 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:40:50 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:50 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:40:50 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:41:25 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:41:25 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:41:25 
+Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:41:25 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:41:25 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:41:25 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:41:25 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:41:27 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:42:16 
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:42:17 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:42:17 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:42:17 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:42:17 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:42:17 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:42:17 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:42:17 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:42:17 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:42:17 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:42:17 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:42:17 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:42:21 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:42:25 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:42:25 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:43:12 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:43:12 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:43:15 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:43:15 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:44:07 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:44:07 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:44:10 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:44:10 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:44:15 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 16:44:15 
+An unhandled exception has occurred while executing the request.
+System.ArgumentNullException:Value cannot be null. (Parameter 'stringToEscape')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.UriHelper.EscapeString(String stringToEscape, Boolean checkExistingEscaped, SearchValues`1 noEscape)
+   at Microsoft.AspNetCore.Http.ResponseCookies.Append(String key, String value, CookieOptions options)
+   at SelfAspNet.Controllers.SamplesController.Cookie(String cookieVal) in C:\data\SelfAspNet\SelfAspNet\Controllers\SamplesController.cs:line 477
+   at lambda_method77(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context) in C:\data\SelfAspNet\SelfAspNet\Middleware\HeadersInfoMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:47:42 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:47:52 
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:47:52 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:47:52 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:47:52 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:47:52 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:47:52 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:47:52 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:47:52 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:47:52 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:47:52 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:47:52 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:47:52 
+Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:47:55 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:47:56 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:47:56 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:48:12 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:48:12 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:48:12 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:48:12 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:48:12 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:48:12 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:15 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:16 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:16 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:18 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:31 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:42 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:48:56 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:50:14 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:50:36 
+Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:50:36 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:50:36 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:50:36 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:50:36 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:50:37 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:50:37 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:50:37 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:50:37 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:50:37 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:50:37 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:50:37 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Http.ResponseCookies（SameSiteNotSecure） 2025/01/27 16:50:41 
+The cookie 'cookieVal' has set 'SameSite=None' and must also set 'Secure'.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:53:03 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:53:12 
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:53:12 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:53:12 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:53:12 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:53:12 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:53:13 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:53:13 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:53:13 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:53:13 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:53:13 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:53:13 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:53:13 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:54:37 
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 16:54:37 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:54:37 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:54:37 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 16:54:37 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 16:54:38 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:54:38 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:54:38 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 16:54:38 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 16:54:38 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:54:38 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 16:54:38 
+Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:24 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:24 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:24:24 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:24 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:24:25 
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:24:25 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:52 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:52 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:24:52 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:24:52 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:24:52 
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:24:52 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:27:23 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:27:23 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:27:23 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:27:23 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:27:23 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:27:23 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Error - Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware（UnhandledException） 2025/01/27 17:27:23 
+An unhandled exception has occurred while executing the request.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(ILogger logger, String message, Object[] args)
+   at SelfAspNet.Controllers.SamplesController.Index(Int32 page)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at SelfAspNet.Middleware.HeadersInfoMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:06 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:06 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:29:06 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:06 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:06 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:06 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:14 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:14 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:29:14 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:14 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:14 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:14 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:25 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:25 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:29:25 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:29:25 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:25 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:29:25 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:30:03 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:30:03 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:30:03 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:30:03 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:30:03 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:30:03 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:43 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:43 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:34:43 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:43 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:34:43 
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:34:43 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:47 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:47 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:34:47 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:34:47 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:34:47 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:34:47 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:36:28 
+Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 17:36:28 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:36:28 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:36:28 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:36:28 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 17:36:29 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:36:29 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:36:29 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:36:29 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:36:29 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:36:29 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:36:29 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+通常の動作情報
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:37:41 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+致命的な問題
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:37:41 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:37:41 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:37:41 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:37:41 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:37:41 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:37:41 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:38:39 
+エラー：/→2025年01月27日
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:38:39 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+致命的な問題
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:38:39 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:38:39 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Warning - Microsoft.AspNetCore.Server.Kestrel（0） 2025/01/27 17:38:39 
+Connection processing ended abnormally.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass12_0`2.<Define>g__Log|0(ILogger logger, T1 arg1, T2 arg2, Exception exception)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.KestrelTrace.GeneralLog.ApplicationError(ILogger logger, String connectionId, String traceIdentifier, Exception ex)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:38:39 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:38:39 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:38:39 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:38:39 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+通常の動作情報
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:23 
+エラー：/→2025年01月27日
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:23 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+致命的な問題
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+通常の動作情報
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+致命的な問題
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:23 
+エラー：/→2025年01月27日
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:23 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+致命的な問題
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:23 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:23 
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:23 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:23 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:23 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:24 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:24 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:24 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:24 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:24 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:40:24 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+通常の動作情報
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:48 
+エラー：/→2025年01月27日
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+致命的な問題
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:40:48 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+致命的な問題
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:40:48 
+通常の動作情報
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 17:40:48 
+Connection id "0HN9ULMOU0GEL", Request id "0HN9ULMOU0GEL:00000008": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Error - Microsoft.AspNetCore.Server.Kestrel（ApplicationError） 2025/01/27 17:40:48 
+Connection id "0HN9ULMOU0GEO", Request id "0HN9ULMOU0GEO:00000001": An unhandled exception was thrown by the application.
+System.AggregateException:An error occurred while writing to logger(s). (The process cannot access the file 'C:\data\SelfAspNet\SelfAspNet\Logs\core_2025-01-27.log' because it is being used by another process.)
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+   at Microsoft.AspNetCore.Diagnostics.DiagnosticsTelemetry.ReportUnhandledException(ILogger logger, HttpContext context, Exception ex)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:41:03 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:41:18 
+Executed DbCommand (85ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/27 17:41:18 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:41:18 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:41:18 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:41:18 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/27 17:41:18 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:41:18 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:41:18 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/27 17:41:18 
+エラー：/→2025年01月27日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/27 17:41:18 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:41:19 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/27 17:41:19 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/27 17:43:32 
+Application is shutting down...

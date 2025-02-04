@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@* これがビューの一番の基盤で_ViewStart.cshtmlの場合はアプリ全体で適用されるレイアウトになる *@
+@* _LayoutはSelfAspNet\Views\Shared\_Layout.cshtmlになる *@
+
+@* _ViewStart.cshtml以外のテンプレートにも、同じようにLayoutは設定できる *@
+@* その場合、個別にその配下の共通レイアウトになる *@
+@* また、Layout = null; といれると共通レイアウトを除外できる*@
+
+@* なお共通テンプレートは以下のルールがある *@
+@* \Views\Shared\配下に作成 *@
+@* _でファイル名をはじめる *@

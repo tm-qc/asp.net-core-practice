@@ -1,0 +1,9 @@
+﻿@using SelfAspNet
+@using SelfAspNet.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@* 国際化対応で追加↓ *@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@* 国際化対応グローバル設定の場合 *@
+@using Microsoft.Extensions.Localization 
+@inject IStringLocalizer<SharedResource> SharedLocalizer

@@ -1,0 +1,261 @@
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:52:52 
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/02/04 11:52:52 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 11:52:52 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 11:52:52 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 11:52:52 
+Content root path: C:\data\SelfAspNet\src\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/02/04 11:52:53 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:52:53 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:52:53 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 11:52:53 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:52:53 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:52:53 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:52:53 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:01 
+Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Samples] ([SubTitle], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:02 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:02 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 11:53:02 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:02 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:02 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:02 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:11 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:11 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 11:53:11 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:11 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:11 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:11 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:18 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:18 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 11:53:18 
+エラー：/Samples/Index/4→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:18 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:18 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:18 
+Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:22 
+Executed DbCommand (2ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+WHERE [s].[Id] = @__Id_0
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:24 
+Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+WHERE [s].[Id] = @__p_0
+Warning - Microsoft.EntityFrameworkCore.Database.Transaction（Microsoft.EntityFrameworkCore.Database.Transaction.SavepointsDisabledBecauseOfMARS） 2025/02/04 11:53:24 
+Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:24 
+Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Samples]
+OUTPUT 1
+WHERE [Id] = @p0;
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:24 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:24 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 11:53:24 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 11:53:24 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:24 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 11:53:24 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 11:53:56 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:01:48 
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/02/04 12:01:48 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 12:01:48 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 12:01:48 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/02/04 12:01:48 
+Content root path: C:\data\SelfAspNet\src\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/02/04 12:01:49 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:01:49 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:01:49 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 12:01:49 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:01:49 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:01:49 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:01:49 
+Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:19 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:19 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 12:02:19 
+エラー：/Samples/Index/3→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:19 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:19 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:19 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:24 
+Executed DbCommand (5ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[SubTitle], [t].[Title], [s0].[Id], [s0].[RTitle], [s0].[SampleId]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[SubTitle], [s].[Title]
+    FROM [Samples] AS [s]
+    WHERE [s].[Id] = @__Id_0
+) AS [t]
+LEFT JOIN [SampleRelation1] AS [s0] ON [t].[Id] = [s0].[SampleId]
+ORDER BY [t].[Id]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:44 
+Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Samples] ([SubTitle], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:44 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:44 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 12:02:44 
+エラー：/→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:44 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:44 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:44 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:47 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:47 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 12:02:47 
+エラー：/Samples/Index/3→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:47 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:47 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:47 
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:52 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:52 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/02/04 12:02:52 
+エラー：/Samples/Index/4→2025年02月04日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/02/04 12:02:52 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:52 
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/02/04 12:02:52 
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY

@@ -1,0 +1,110 @@
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 11:12:58 
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/28 11:12:58 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 11:12:58 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 11:12:58 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 11:12:58 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/28 11:12:58 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 11:12:58 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 11:12:58 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/28 11:12:58 
+エラー：/→2025年01月28日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 11:12:58 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 11:12:58 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 11:12:58 
+Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:20:58 
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/28 16:20:58 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:20:58 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:20:58 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:20:58 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/28 16:20:59 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:20:59 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:20:59 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/28 16:20:59 
+エラー：/→2025年01月28日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:20:59 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:20:59 
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:20:59 
+Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:26:42 
+Application is shutting down...
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:26:52 
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Samples] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Information - Microsoft.Hosting.Lifetime（ListeningOnAddress） 2025/01/28 16:26:52 
+Now listening on: http://localhost:5103
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:26:52 
+Application started. Press Ctrl+C to shut down.
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:26:52 
+Hosting environment: Development
+Information - Microsoft.Hosting.Lifetime（0） 2025/01/28 16:26:52 
+Content root path: C:\data\SelfAspNet\SelfAspNet
+Warning - Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware（FailedToDeterminePort） 2025/01/28 16:26:53 
+Failed to determine the https port for redirect.
+Information - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:26:53 
+通常の動作情報
+Warning - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:26:53 
+警告：エラーではないが、潜在的な問題で対応したほうが無難
+Error - SelfAspNet.Controllers.SamplesController（1001） 2025/01/28 16:26:53 
+エラー：/→2025年01月28日
+Critical - SelfAspNet.Controllers.SamplesController（0） 2025/01/28 16:26:53 
+致命的な問題
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:26:53 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Samples] AS [s]
+Information - Microsoft.EntityFrameworkCore.Database.Command（Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted） 2025/01/28 16:26:53 
+Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[SubTitle], [s].[Title]
+FROM [Samples] AS [s]
+ORDER BY [s].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY

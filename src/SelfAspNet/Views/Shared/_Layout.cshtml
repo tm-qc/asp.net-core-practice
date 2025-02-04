@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SelfAspNet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/SelfAspNet.styles.css" asp-append-version="true" />
+
+    @* Development(開発環境)の場合読込 *@
+    @* includeをexcludeにするとDevelopment以外になる *@
+    @* Developmentは SelfAspNet\Properties\launchSettings.jsonのASPNETCORE_ENVIRONMENTで設定できる*@
+    @* launchSettings.jsonはローカル用の設定ファイルだが、本番ではサーバーでASPNETCORE_ENVIRONMENTをReleaseで定義するみたい *@
+    @* launchSettings.jsonが反映しないときは dotnet cleanしてdotnet watchで起動したらOK *@
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/sample_dev.css" asp-append-version="true" />
+    </environment>
+    <environment include="Release">
+        <link rel="stylesheet" href="~/css/sample.css" asp-append-version="true" />
+    </environment>
+
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SelfAspNet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @* launchSettings.jsonの設定を確認 *@
+        <p>Environment: @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</p>
+        <main role="main" class="pb-3">
+            @* ここで個別のテンプレート読込してる *@
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - SelfAspNet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* テンプレート間の読込について親がわの大枠にはこれが必要 *@
+    @* これがなくて子の方に@section Scriptsみたいな読込がないとエラーになる *@
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @* js読込サンプル *@
+
+    @* ローカルのjsファイルならこれだけでOK *@
+    @* <script src="~/js/sample.js" asp-append-version="true"></script> *@
+
+    @* CDNなど外部ファイルを読込ときにはこういうのが必要らしい *@
+    <script 
+        @* メインのjsファイル *@
+        @* 属性の改行形式や閉じタグの扱いによってパスに~があると読み込めないみたい *@
+        src="/js/sample.js"
+
+        @*キャッシュ対策  *@
+        asp-append-version="true"
+
+        @* メインが読込失敗したときの予備のファイル(テストできなかった。メインを失敗にする方法が不明だった) *@
+        asp-fallback-src="/js/sample_reserve.js"
+
+        @* メインが読み込めてるかテスト(テスト方法はファイルによるので今回は一例。しかもテスト方法ない？できなかった) *@
+        asp-fallback-test="window.Vue"
+
+        @* クロスオリジン 主に integrity を使う場合に推奨。*@
+        @* CORSを有効にし、匿名のリクエストとしてリソースを取得するために使用します。 *@
+        @* crossorigin="anonymous" *@
+
+        @* Refererヘッダーを送信しないように設定し、プライバシーを保護するために使用します。 *@
+        @* referrerpolicy="no-referrer" *@
+
+        @* 検証用のハッシュ値。外部との連携の場合不正使用を防ぐために使う。表からは見えないらしい
+        (CDNから提供 or 自分で作って設定(詳細はあまり知らない)) *@
+        @* integrity="sha384-xxxxx" *@
+
+        @* 基本的にここまでするのはCDNを読み込むときだけ *@
+    ></script>
+</body>
+</html>
