@@ -217,12 +217,38 @@ app.UseAuthorization();
 app.UseSession();
 
 app.MapControllerRoute(
+    // name：ルートの識別子
+    //
+    // RedirectToRoute("admin") のように、ルート名で遷移先を指定する場合に使う
+    // defaultは指定なしの初期値
     name: "default",
+
+    // pattern：ルートのパス設定
+    //
+    // controller：コントローラー名のクラス名（HelloControllerならHello）
+    // action：コントローラーのアクション名のメソッド名（IndexならIndex）
+    // ※=の値は初期値
+    //
+    // ※ なおアクションではView()で遷移先を指定するが、()が空白、引数なしの場合は以下の要領で遷移先を決定する
+    //
+    // 以下のフォルダ階層のように、コントローラ名、アクション名で一致するテンプレート(cshtml)を呼ぶ
+    // Views/コントローラー/アクション名.cshtml
+
+    //ルーティングの確認方法は？
+    // Laravelみたいにルーティングリストは出せないので、コントローラファイルのアクション or Route[]属性があればそれをみて確認するしかなさそう
+    // ＝網羅出来ないっぽい
+
+    // [Route()] 属性：アクション単位でURLパターンを明示的に設定できます
+    //
+    // [Route()] を付けたアクションは、app.MapControllerRoute（従来ルーティング）よりも優先されます。
+    // [Route()] 属性はアクション単位でURLパターンを明示的に設定できます。
+
     // 試しにデフォルトで表示される物を変更
     // http://localhost:5103/ で内容は http://localhost:5103/Samples/Index が表示されるようになる
 
     // pattern: "{controller=Home}/{action=Index}/{id?}");
-    pattern: "{controller=Samples}/{action=Index}/{page:int?}");
+    pattern: "{controller=Samples}/{action=Index}/{page:int?}"
+ );
 
 // SampleSeed.csでデータを投入するために追加
 // DIコンテナ(機能させるためのクラス)の注入準備でscope作成
