@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;//UseSqlServerにひつようだった
 using SelfAspNet.Filters;
 using SelfAspNet.Models;
-using SelfAspNet.Repository;
+using SelfAspNet.Repositories;
 using SelfAspNet.Middleware;
 using SelfAspNet.Lib;
 using Microsoft.Extensions.Logging;

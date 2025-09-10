@@ -1,6 +1,6 @@
 using System;
 
-namespace SelfAspNet.Repository;
+namespace SelfAspNet.Repositories;
 
 // モデル
 using SelfAspNet.Models;
@@ -10,7 +10,7 @@ using X.PagedList;//型IPagedListを使うため
 using X.PagedList.EF;//メソッドToPagedListAsyncを使うため
 
 // リポジトリインターフェース
-using SelfAspNet.Repository;
+using SelfAspNet.Repositories;
 
 public class SampleRepository : ISampleRepository
 {

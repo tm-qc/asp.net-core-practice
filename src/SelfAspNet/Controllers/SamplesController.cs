@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using SelfAspNet.Models;
-using SelfAspNet.Repository;
+using SelfAspNet.Repositories;
 // using Microsoft.Extensions.Options;
 
 // ページネーションのプラグイン使うために追加

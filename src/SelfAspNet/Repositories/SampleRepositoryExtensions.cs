@@ -1,6 +1,6 @@
 using System;
 
-namespace SelfAspNet.Repository;
+namespace SelfAspNet.Repositories;
 
 /// <summary>
 /// ちなみに・・IServiceCollectionをつかったメソッドを定義しておくと、
